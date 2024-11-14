@@ -38,7 +38,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "pathfinder-deno"
-          entrypoint: "server.ts"
+          entrypoint: "src/server.ts"
           root: "."
-          
-          
