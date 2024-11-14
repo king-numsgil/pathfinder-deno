@@ -39,6 +39,6 @@ jobs:
         with:
           project: "pathfinder-deno"
           entrypoint: "server.ts"
-          root: ""
+          root: "."
           
           
