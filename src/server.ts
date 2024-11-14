@@ -2,11 +2,10 @@ import { serveStatic } from "hono/deno";
 import { logger } from "hono/logger";
 import { Hono } from "hono";
 
-import { databaseMiddleware } from "@/database/index.ts";
 import { api } from "@/api/index.ts";
 
 const app = new Hono();
-app.use(logger(), databaseMiddleware);
+app.use(logger());
 
 app.route("/api", api);
 

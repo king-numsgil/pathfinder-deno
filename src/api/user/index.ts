@@ -1,11 +1,11 @@
 import { Hono } from "hono";
 
-import { User } from "@/api/users/User.entity.ts";
+import { User } from "@/api/user/User.entity.ts";
 import db from "@/database/index.ts";
 
-export const users = new Hono();
+export const userApi = new Hono();
 
-users.get("/", async (c) => {
+userApi.get("/", async (c) => {
     const repo = db.em.repo(User);
     return c.json(await repo.findAll());
 });
