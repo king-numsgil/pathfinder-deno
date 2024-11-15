@@ -41,4 +41,4 @@ jobs:
           entrypoint: "./src/server.ts"
           root: "."
           
-          exclude: ./refresh.ts,./data
+          
