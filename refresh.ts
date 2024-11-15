@@ -1,14 +1,14 @@
 import db from "@/database/index.ts";
 
-import {Bloodline, BloodlineSpell} from "./src/api/pathfinder/entities/Bloodline.entity.ts";
-import {Class, ClassSpell} from "./src/api/pathfinder/entities/Class.entity.ts";
-import {Deity} from "./src/api/pathfinder/entities/Deity.entity.ts";
-import {Domain, DomainSpell, Subdomain, SubdomainSpell} from "./src/api/pathfinder/entities/Domain.entity.ts";
-import {Feat, FeatPrerequisite_Feat, FeatPrerequisite_Skill, FeatPrerequisite_Special, FeatPrerequisite_Stat} from "./src/api/pathfinder/entities/Feat.entity.ts";
-import {Mystery, MysterySpell} from "./src/api/pathfinder/entities/Mystery.entity.ts";
-import {Patron, PatronSpell} from "./src/api/pathfinder/entities/Patron.entity.ts";
-import {School, Subschool} from "./src/api/pathfinder/entities/School.entity.ts";
-import {Spell} from "./src/api/pathfinder/entities/Spell.entity.ts";
+import {Bloodline, BloodlineSpell} from "@/api/pathfinder/entities/Bloodline.entity.ts";
+import {Class, ClassSpell} from "@/api/pathfinder/entities/Class.entity.ts";
+import {Deity} from "@/api/pathfinder/entities/Deity.entity.ts";
+import {Domain, DomainSpell, Subdomain, SubdomainSpell} from "@/api/pathfinder/entities/Domain.entity.ts";
+import {Feat, FeatPrerequisite_Feat, FeatPrerequisite_Skill, FeatPrerequisite_Special, FeatPrerequisite_Stat} from "@/api/pathfinder/entities/Feat.entity.ts";
+import {Mystery, MysterySpell} from "@/api/pathfinder/entities/Mystery.entity.ts";
+import {Patron, PatronSpell} from "@/api/pathfinder/entities/Patron.entity.ts";
+import {School, Subschool} from "@/api/pathfinder/entities/School.entity.ts";
+import {Spell} from "@/api/pathfinder/entities/Spell.entity.ts";
 import {Alignment, Descriptor, FeatType} from "@/api/pathfinder/entities/types.ts";
 
 await db.orm.schema.refreshDatabase();
@@ -185,7 +185,7 @@ const em = db.em.fork();
 
 console.log("Seeding classes...");
 {
-    const classes = [
+    [
         "Alchemist",
         "Antipaladin",
         "Arcanist",
@@ -230,9 +230,86 @@ console.log("Seeding classes...");
         "Warpriest",
         "Witch",
         "Wizard",
-    ];
+    ].map(name => em.getRepository(Class).create({ name }));
 
-    classes.map(name => em.getRepository(Class).create({ name }));
+    [
+        "Abjuration",
+        "Conjuration",
+        "Divination",
+        "Enchantment",
+        "Evocation",
+        "Illusion",
+        "Necromancy",
+        "Transmutation",
+        "Universal",
+    ].map(name => em.getRepository(School).create({ name }));
+
+    [
+        "Calling",
+        "Charm",
+        "Compulsion",
+        "Creation",
+        "Figment",
+        "Glamer",
+        "Healing",
+        "Pattern",
+        "Phantasm",
+        "Polymorph",
+        "Scrying",
+        "Shadow",
+        "Summoning",
+        "Teleportation",
+        "Haunted",
+    ].map(name => em.getRepository(Subschool).create({ name }));
 
     await em.flush();
 }
+console.log("...Done!");
+
+console.log("Seeding domains...");
+{
+    const data = JSON.parse(await Deno.readTextFile("./data/domains.json")) as DomainList;
+
+    for (const name of Object.keys(data)) {
+        const domain = new Domain();
+        domain.name = name;
+
+        for (const dname of data[name].Deities) {
+            let deity = await em.getRepository(Deity).findOne({ name: dname });
+            if (!deity) {
+                deity = new Deity();
+                deity.name = dname;
+                deity.alignment = Alignment.Neutral;
+                deity.type = "Core Divinity";
+                em.persist(deity);
+                console.log(`\tAdded deity ${dname}`);
+            }
+
+            domain.deities.add(deity);
+        }
+
+        for (const sub of data[name].Subdomains) {
+            let subdomain = await em.getRepository(Subdomain).findOne({ name: sub });
+            if (!subdomain) {
+                subdomain = new Subdomain();
+                subdomain.name = sub;
+                subdomain.parent = domain;
+                for (const deity of domain.deities) {
+                    subdomain.deities.add(deity);
+                }
+
+                em.persist(subdomain);
+                console.log(`\tAdded subdomain ${sub}`);
+            }
+
+            domain.subdomains.add(subdomain);
+        }
+
+        console.log(`\tAdded domain ${name}`);
+        await em.persist(domain).flush();
+    }
+}
+console.log("...Done!");
+
+await db.orm.close();
+Deno.exit(0);
