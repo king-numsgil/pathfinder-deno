@@ -23,6 +23,9 @@ export class Domain {
     @Unique()
     name!: string;
 
+    @OneToMany(() => Subdomain, subdomain => subdomain.parent)
+    subdomains = new Collection<Subdomain>(this);
+
     @OneToMany(() => DomainSpell, (spell) => spell.domain)
     spells = new Collection<DomainSpell>(this);
 
@@ -36,10 +39,10 @@ export class DomainSpell {
     id: string = ulid();
 
     @ManyToOne("Spell")
-    spell!: Ref<Spell>;
+    spell!: Spell;
 
     @ManyToOne("Domain")
-    domain!: Ref<Domain>;
+    domain!: Domain;
 
     @Property()
     spellLevel!: number;
@@ -54,6 +57,9 @@ export class Subdomain {
     @Unique()
     name!: string;
 
+    @ManyToOne("Domain")
+    parent!: Domain;
+
     @OneToMany(() => SubdomainSpell, (spell) => spell.subdomain)
     spells = new Collection<SubdomainSpell>(this);
 
@@ -67,10 +73,10 @@ export class SubdomainSpell {
     id: string = ulid();
 
     @ManyToOne("Spell")
-    spell!: Ref<Spell>;
+    spell!: Spell;
 
     @ManyToOne("Subdomain")
-    subdomain!: Ref<Subdomain>;
+    subdomain!: Subdomain;
 
     @Property()
     spellLevel!: number;

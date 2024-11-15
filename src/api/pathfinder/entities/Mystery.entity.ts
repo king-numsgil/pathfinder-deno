@@ -36,10 +36,10 @@ export class MysterySpell {
     id: string = ulid();
 
     @ManyToOne("Spell")
-    spell!: Ref<Spell>;
+    spell!: Spell;
 
     @ManyToOne("Mystery")
-    mystery!: Ref<Mystery>;
+    mystery!: Mystery;
 
     @Property()
     classLevel!: number;

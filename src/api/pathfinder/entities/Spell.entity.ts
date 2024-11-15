@@ -99,13 +99,13 @@ export class Spell {
     race: string | null = null;
 
     @ManyToOne("School")
-    school!: Ref<School>;
+    school!: School;
 
     @ManyToOne("Subschool")
-    subschool!: Ref<Subschool>;
+    subschool!: Subschool;
 
     @ManyToOne("Deity", { nullable: true })
-    deity?: Ref<Deity>;
+    deity?: Deity | null;
 
     @OneToMany("DomainSpell", (domain: DomainSpell) => domain.spell)
     domains = new Collection<DomainSpell>(this);

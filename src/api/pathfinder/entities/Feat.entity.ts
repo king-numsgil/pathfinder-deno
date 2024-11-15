@@ -68,10 +68,10 @@ export class FeatPrerequisite_Feat {
     id: string = ulid();
 
     @ManyToOne("Feat")
-    parent!: Ref<Feat>;
+    parent!: Feat;
 
     @ManyToOne("Feat")
-    feat!: Ref<Feat>;
+    feat!: Feat;
 
     @Property({ nullable: true })
     note: string | null = null;
@@ -83,7 +83,7 @@ export class FeatPrerequisite_Skill {
     id: string = ulid();
 
     @ManyToOne("Feat")
-    parent!: Ref<Feat>;
+    parent!: Feat;
 
     @Property()
     name!: string;
@@ -98,7 +98,7 @@ export class FeatPrerequisite_Stat {
     id: string = ulid();
 
     @ManyToOne("Feat")
-    parent!: Ref<Feat>;
+    parent!: Feat;
 
     @Property()
     name!: string;
@@ -113,7 +113,7 @@ export class FeatPrerequisite_Special {
     id: string = ulid();
 
     @ManyToOne("Feat")
-    parent!: Ref<Feat>;
+    parent!: Feat;
 
     @Property()
     condition!: string;
