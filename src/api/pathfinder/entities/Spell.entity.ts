@@ -1,4 +1,4 @@
-import { Collection, Entity, Enum, Index, ManyToOne, OneToMany, PrimaryKey, Property, type Ref } from "@mikro-orm/core";
+import { Collection, Entity, Enum, Index, ManyToOne, OneToMany, PrimaryKey, Property } from "@mikro-orm/core";
 import { ulid } from "@std/ulid";
 
 import type { DomainSpell, SubdomainSpell } from "@/api/pathfinder/entities/Domain.entity.ts";
@@ -98,14 +98,14 @@ export class Spell {
     @Property({ nullable: true })
     race: string | null = null;
 
-    @ManyToOne("School")
-    school!: School;
+    @ManyToOne("School", { nullable: true })
+    school: School | null = null;
 
-    @ManyToOne("Subschool")
-    subschool!: Subschool;
+    @ManyToOne("Subschool", { nullable: true })
+    subschool: Subschool | null = null;
 
     @ManyToOne("Deity", { nullable: true })
-    deity?: Deity | null;
+    deity: Deity | null = null;
 
     @OneToMany("DomainSpell", (domain: DomainSpell) => domain.spell)
     domains = new Collection<DomainSpell>(this);

@@ -20,7 +20,7 @@ export enum Descriptor {
     Lawful = "lawful",
     Light = "light",
     Meditative = "meditative",
-    Mind_affecting = "mind_affecting",
+    MindAffecting = "mind_affecting",
     Pain = "pain",
     Poison = "poison",
     Ruse = "ruse",

@@ -22,10 +22,10 @@ export class BloodlineSpell {
     id: string = ulid();
 
     @ManyToOne("Spell")
-    spell!: Ref<Spell>;
+    spell!: Spell;
 
     @ManyToOne("Bloodline")
-    bloodline!: Ref<Bloodline>;
+    bloodline!: Bloodline;
 
     @Property()
     classLevel!: number;
