@@ -3,6 +3,7 @@ import { logger } from "hono/logger";
 import { Hono } from "hono";
 
 import { api } from "@/api/index.ts";
+import db from "@/database/index.ts";
 
 const app = new Hono();
 app.use(logger());
@@ -26,6 +27,18 @@ if (Deno.env.get("NODE_ENV") !== "production") {
             },
         }),
     );
+}
+
+const listener = async () => {
+    await db.orm.close();
+    console.log("DB connection closed");
+    Deno.exit(0);
+}
+
+Deno.addSignalListener("SIGINT", listener);
+if (Deno.build.os !== "windows") {
+    Deno.addSignalListener("SIGTERM", listener);
+    Deno.addSignalListener("SIGKILL", listener);
 }
 
 Deno.serve({ port: 3000 }, app.fetch);
