@@ -5,7 +5,7 @@
         "build": "deno run -A npm:vite build"
     },
     "compilerOptions": {
-        "allowJs": true,
+        "checkJs": true,
         "lib": ["ESNext", "DOM", "DOM.Iterable", "Dom.AsyncIterable", "deno.ns"],
         "strict": true,
         "emitDecoratorMetadata": true,

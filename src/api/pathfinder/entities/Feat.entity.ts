@@ -1,4 +1,4 @@
-import { Collection, Entity, Enum, Index, ManyToOne, OneToMany, PrimaryKey, Property, type Ref } from "@mikro-orm/core";
+import { Collection, Entity, Enum, Index, ManyToOne, OneToMany, PrimaryKey, Property } from "@mikro-orm/core";
 import { ulid } from "@std/ulid";
 
 import { FeatType } from "@/api/pathfinder/entities/types.ts";

@@ -1,14 +1,4 @@
-import {
-    Collection,
-    Entity,
-    ManyToMany,
-    ManyToOne,
-    OneToMany,
-    PrimaryKey,
-    Property,
-    type Ref,
-    Unique,
-} from "@mikro-orm/core";
+import { Collection, Entity, ManyToMany, ManyToOne, OneToMany, PrimaryKey, Property, Unique, } from "@mikro-orm/core";
 import { ulid } from "@std/ulid";
 
 import type { Deity } from "@/api/pathfinder/entities/Deity.entity.ts";

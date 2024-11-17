@@ -12,5 +12,7 @@ deityApi.get("/", async c => {
     const repo = db.em.repo(Deity);
     return c.json(await repo.findOne({
         id: c.req.param("id"),
+    }, {
+        populate: ["id", "name", "type", "alignment", "domains", "subdomains", "spells"],
     }) ?? []);
 });
