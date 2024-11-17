@@ -5,19 +5,21 @@ import db from "@/database/index.ts";
 
 export const bloodlineApi = new Hono();
 
-bloodlineApi.get("/", async c => {
+bloodlineApi.get("/", async (c) => {
     const repo = db.em.repo(Bloodline);
     return c.json(await repo.findAll());
-}).get("/:id", async c => {
+}).get("/:id", async (c) => {
     const repo = db.em.repo(Bloodline);
-    return c.json(await repo.findOne({
-        id: c.req.param("id"),
-    }, {
-        populate: ["id", "name", "spells", "spells.classLevel", "spells.spell"],
-        populateOrderBy: {
-            spells: {
-                classLevel: "asc",
-            }
-        }
-    }) ?? []);
+    return c.json(
+        await repo.findOne({
+            id: c.req.param("id"),
+        }, {
+            populate: ["id", "name", "spells", "spells.classLevel", "spells.spell"],
+            populateOrderBy: {
+                spells: {
+                    classLevel: "asc",
+                },
+            },
+        }) ?? [],
+    );
 });

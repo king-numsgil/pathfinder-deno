@@ -63,9 +63,9 @@ spellApi.get(
 
         if (params.spellLevel && filter.$and && filter.$or) {
             filter.$or.push(
-                {classes: {spellLevel: params.spellLevel}},
-                {domains: {spellLevel: params.spellLevel}},
-                {subdomains: {spellLevel: params.spellLevel}},
+                { classes: { spellLevel: params.spellLevel } },
+                { domains: { spellLevel: params.spellLevel } },
+                { subdomains: { spellLevel: params.spellLevel } },
             );
         }
 

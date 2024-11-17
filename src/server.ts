@@ -33,7 +33,7 @@ const listener = async () => {
     await db.orm.close();
     console.log("DB connection closed");
     Deno.exit(0);
-}
+};
 
 Deno.addSignalListener("SIGINT", listener);
 if (Deno.build.os !== "windows") {
