@@ -1,4 +1,3 @@
-import { QueryOrderNumeric } from "@mikro-orm/core";
 import { Hono } from "hono";
 
 import { Patron } from "@/api/pathfinder/entities/Patron.entity.ts";
@@ -18,7 +17,7 @@ patronApi.get("/", async (c) => {
             populate: ["id", "name", "spells", "spells.classLevel", "spells.spell"],
             populateOrderBy: {
                 spells: {
-                    classLevel: QueryOrderNumeric.ASC,
+                    classLevel: "asc",
                 },
             },
         }) ?? [],

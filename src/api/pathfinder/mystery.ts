@@ -1,4 +1,3 @@
-import { QueryOrderNumeric } from "@mikro-orm/core";
 import { Hono } from "hono";
 
 import { Mystery } from "@/api/pathfinder/entities/Mystery.entity.ts";
@@ -18,7 +17,7 @@ mysteryApi.get("/", async (c) => {
             populate: ["id", "name", "spells", "spells.classLevel", "spells.spell"],
             populateOrderBy: {
                 spells: {
-                    classLevel: QueryOrderNumeric.ASC,
+                    classLevel: "asc",
                 },
             },
         }) ?? [],

@@ -1,4 +1,3 @@
-import { QueryOrderNumeric } from "@mikro-orm/core";
 import { Hono } from "hono";
 
 import { Domain, Subdomain } from "@/api/pathfinder/entities/Domain.entity.ts";
@@ -18,7 +17,7 @@ domainApi.get("/", async (c) => {
             populate: ["id", "name", "deities", "subdomains", "spells", "spells.spellLevel", "spells.spell"],
             populateOrderBy: {
                 spells: {
-                    spellLevel: QueryOrderNumeric.ASC,
+                    spellLevel: "asc",
                 },
             },
         }) ?? [],
@@ -39,7 +38,7 @@ subdomainApi.get("/", async (c) => {
             populate: ["id", "name", "deities", "parent", "spells", "spells.spellLevel", "spells.spell"],
             populateOrderBy: {
                 spells: {
-                    spellLevel: QueryOrderNumeric.ASC,
+                    spellLevel: "asc",
                 },
             },
         }) ?? [],
