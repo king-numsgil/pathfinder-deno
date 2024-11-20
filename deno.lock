@@ -20,7 +20,6 @@
     "npm:@mikro-orm/core@^6.4.0": "6.4.0",
     "npm:@mikro-orm/postgresql@^6.4.0": "6.4.0_@mikro-orm+core@6.4.0",
     "npm:@mikro-orm/reflection@^6.4.0": "6.4.0_@mikro-orm+core@6.4.0",
-    "npm:@tabler/icons-react@^3.22.0": "3.22.0_react@18.3.1",
     "npm:@types/node@^22.9.0": "22.9.0",
     "npm:@types/react-dom@^18.3.1": "18.3.1",
     "npm:@types/react@^18.3.12": "18.3.12",
@@ -544,16 +543,6 @@
     },
     "@rollup/rollup-win32-x64-msvc@4.26.0": {
       "integrity": "sha512-2x8MO1rm4PGEP0xWbubJW5RtbNLk3puzAMaLQd3B3JHVw4KcHlmXcO+Wewx9zCoo7EUFiMlu/aZbCJ7VjMzAag=="
-    },
-    "@tabler/icons-react@3.22.0_react@18.3.1": {
-      "integrity": "sha512-pOnn+IqZpnkYsEKRvbXXLXwXhYwg4cy1fEVr5SRrgAYJXkobpDjFTdVHlab0HEBXY5AE1NjsMlVeK6H/8Vv2uQ==",
-      "dependencies": [
-        "@tabler/icons",
-        "react"
-      ]
-    },
-    "@tabler/icons@3.22.0": {
-      "integrity": "sha512-IfgGzhFph5OBr2wTieWL/hyAs0FThnq9O155a6kfGYxqx7h5LQw91wnRswhEaGhXCcfmR7ZVDUr9H+x4b9Pb8g=="
     },
     "@ts-morph/common@0.25.0": {
       "integrity": "sha512-kMnZz+vGGHi4GoHnLmMhGNjm44kGtKUXGnOvrKmMwAuvNjM/PgKVGfUnL7IDvK7Jb2QQ82jq3Zmp04Gy+r3Dkg==",
@@ -1604,7 +1593,6 @@
       "npm:@mikro-orm/core@^6.4.0",
       "npm:@mikro-orm/postgresql@^6.4.0",
       "npm:@mikro-orm/reflection@^6.4.0",
-      "npm:@tabler/icons-react@^3.22.0",
       "npm:@types/node@^22.9.0",
       "npm:@types/react-dom@^18.3.1",
       "npm:@types/react@^18.3.12",

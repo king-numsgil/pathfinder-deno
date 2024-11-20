@@ -39,7 +39,6 @@ jobs:
         with:
           project: "pathfinder-deno"
           entrypoint: "./src/server.ts"
-          include: "./src,./dist,./deno.json,./deno.lock,./package.json,./postcss.config.cjs,./tsconfig.json,./vite.config.ts"
           root: "."
           
           
