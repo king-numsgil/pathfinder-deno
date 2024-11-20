@@ -9,27 +9,30 @@
     "jsr:@std/encoding@~0.222.1": "0.222.1",
     "jsr:@std/fmt@~0.222.1": "0.222.1",
     "jsr:@std/ulid@1": "1.0.0",
-    "npm:@hono/zod-validator@~0.4.1": "0.4.1_hono@4.6.10_zod@3.23.8",
-    "npm:@mantine/core@^7.14.0": "7.14.0_@mantine+hooks@7.14.0__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
-    "npm:@mantine/form@^7.14.0": "7.14.0_react@18.3.1",
-    "npm:@mantine/hooks@^7.14.0": "7.14.0_react@18.3.1",
-    "npm:@mantine/modals@^7.14.0": "7.14.0_@mantine+core@7.14.0__@mantine+hooks@7.14.0___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.0__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
-    "npm:@mantine/notifications@^7.14.0": "7.14.0_@mantine+core@7.14.0__@mantine+hooks@7.14.0___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.0__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
-    "npm:@mantine/spotlight@^7.14.0": "7.14.0_@mantine+core@7.14.0__@mantine+hooks@7.14.0___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.0__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
-    "npm:@mantine/vanilla-extract@^7.14.0": "7.14.0_@mantine+core@7.14.0__@mantine+hooks@7.14.0___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.0__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
+    "npm:@hono/zod-validator@~0.4.1": "0.4.1_hono@4.6.11_zod@3.23.8",
+    "npm:@mantine/core@^7.14.1": "7.14.1_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
+    "npm:@mantine/form@^7.14.1": "7.14.1_react@18.3.1",
+    "npm:@mantine/hooks@^7.14.1": "7.14.1_react@18.3.1",
+    "npm:@mantine/modals@^7.14.1": "7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
+    "npm:@mantine/notifications@^7.14.1": "7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
+    "npm:@mantine/spotlight@^7.14.1": "7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
+    "npm:@mantine/vanilla-extract@^7.14.1": "7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
     "npm:@mikro-orm/core@^6.4.0": "6.4.0",
     "npm:@mikro-orm/postgresql@^6.4.0": "6.4.0_@mikro-orm+core@6.4.0",
     "npm:@mikro-orm/reflection@^6.4.0": "6.4.0_@mikro-orm+core@6.4.0",
+    "npm:@tabler/icons-react@^3.22.0": "3.22.0_react@18.3.1",
     "npm:@types/node@^22.9.0": "22.9.0",
     "npm:@types/react-dom@^18.3.1": "18.3.1",
     "npm:@types/react@^18.3.12": "18.3.12",
     "npm:@vanilla-extract/vite-plugin@^4.0.17": "4.0.17_vite@5.4.11__@types+node@22.9.0_@types+node@22.9.0",
     "npm:@vitejs/plugin-react@^4.3.3": "4.3.3_vite@5.4.11__@types+node@22.9.0_@babel+core@7.26.0_@types+node@22.9.0",
-    "npm:hono@^4.6.10": "4.6.10",
+    "npm:hono@^4.6.11": "4.6.11",
     "npm:postcss-preset-mantine@^1.17.0": "1.17.0_postcss@8.4.49",
     "npm:postcss-simple-vars@^7.0.1": "7.0.1_postcss@8.4.49",
     "npm:postcss@^8.4.49": "8.4.49",
     "npm:react-dom@^18.3.1": "18.3.1_react@18.3.1",
+    "npm:react-helmet-async@^2.0.5": "2.0.5_react@18.3.1",
+    "npm:react-router-dom@^6.28.0": "6.28.0_react@18.3.1_react-dom@18.3.1__react@18.3.1",
     "npm:react@^18.3.1": "18.3.1",
     "npm:typescript@^5.6.3": "5.6.3",
     "npm:vite@^5.4.11": "5.4.11_@types+node@22.9.0",
@@ -314,8 +317,8 @@
         "react-dom"
       ]
     },
-    "@floating-ui/react@0.26.27_react@18.3.1_react-dom@18.3.1__react@18.3.1": {
-      "integrity": "sha512-jLP72x0Kr2CgY6eTYi/ra3VA9LOkTo4C+DUTrbFgFOExKy3omYVmwMjNKqxAHdsnyLS96BIDLcO2SlnsNf8KUQ==",
+    "@floating-ui/react@0.26.28_react@18.3.1_react-dom@18.3.1__react@18.3.1": {
+      "integrity": "sha512-yORQuuAtVpiRjpMhdc0wJj06b9JFjrYF4qp96j++v2NBpbi6SEGF7donUJ3TMieerQ6qVkAv1tgr7L4r5roTqw==",
       "dependencies": [
         "@floating-ui/react-dom",
         "@floating-ui/utils",
@@ -327,7 +330,7 @@
     "@floating-ui/utils@0.2.8": {
       "integrity": "sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig=="
     },
-    "@hono/zod-validator@0.4.1_hono@4.6.10_zod@3.23.8": {
+    "@hono/zod-validator@0.4.1_hono@4.6.11_zod@3.23.8": {
       "integrity": "sha512-I8LyfeJfvVmC5hPjZ2Iij7RjexlgSBT7QJudZ4JvNPLxn0JQ3sqclz2zydlwISAnw21D2n4LQ0nfZdoiv9fQQA==",
       "dependencies": [
         "hono",
@@ -358,8 +361,8 @@
         "@jridgewell/sourcemap-codec"
       ]
     },
-    "@mantine/core@7.14.0_@mantine+hooks@7.14.0__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
-      "integrity": "sha512-Osj3nwCXFhOVHIoDtpEpciP7huPhGmG/0w+Zol5tKJ9SG5trV4NDfdFwFcNoxx5al8L6eCLS/fJhloFXaqhOnA==",
+    "@mantine/core@7.14.1_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
+      "integrity": "sha512-oHqaOE1n4KJkvJgF628OCVXE2zUgkEotEsPUdVaC58qRfJ7SvZAI26JNbUG8+MoqHHEqHKtBaRkTyuEVMbomxw==",
       "dependencies": [
         "@floating-ui/react",
         "@mantine/hooks",
@@ -372,22 +375,22 @@
         "type-fest"
       ]
     },
-    "@mantine/form@7.14.0_react@18.3.1": {
-      "integrity": "sha512-oZQuSiREcZLALTILUwovIc1GuNSQAZfFyhUCQE2MqF5tmjcy51HdeQ0kBtkjCylrc50v165KVtANuWhFwA/2dg==",
+    "@mantine/form@7.14.1_react@18.3.1": {
+      "integrity": "sha512-ziYsTsFhR1sEjGebwahKr7LRRFQQtH47o+rPLbvD0FGb6aYRVQgaebQo4jVgxFIgqiafxGNEpD6GkPBqmCmU4g==",
       "dependencies": [
         "fast-deep-equal",
         "klona",
         "react"
       ]
     },
-    "@mantine/hooks@7.14.0_react@18.3.1": {
-      "integrity": "sha512-BJ577AoQ5KnvbuaG174TYAmL2UqcX9qh9aL0aOx+gqyMM6GWeBXUXWx1kcMCzaDbYZwfQptU476fpSjHdcLjMw==",
+    "@mantine/hooks@7.14.1_react@18.3.1": {
+      "integrity": "sha512-VlgTyV/9WNFCwCshW1KHMYNzLt+M8aG68E1lWaqOXtyWSLJo+X5zQJGg0f8bwGbJvIMQCpQd0yTLfnjD6uAtrA==",
       "dependencies": [
         "react"
       ]
     },
-    "@mantine/modals@7.14.0_@mantine+core@7.14.0__@mantine+hooks@7.14.0___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.0__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
-      "integrity": "sha512-+9NeQnvH3dARoPXqJyq68FUt8+YWf/n1iNGM6ssbysrK2RMRZd/+XjdhRwGVi464Lg4UUT/QKbMos9CGrNxj9A==",
+    "@mantine/modals@7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
+      "integrity": "sha512-jpcRS5fzD+CPRJ7mebA9lt0bmSI+2lJVZloG7SPIY3S66ZtUsEis0fHkDtuAqGANbhr43Enjhno0M+4x9IzuZw==",
       "dependencies": [
         "@mantine/core",
         "@mantine/hooks",
@@ -395,8 +398,8 @@
         "react-dom"
       ]
     },
-    "@mantine/notifications@7.14.0_@mantine+core@7.14.0__@mantine+hooks@7.14.0___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.0__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
-      "integrity": "sha512-CEpGRYj7xtzYQ8VLHN+tespWkTH3U1ghHKxKeJNmfcSjf7VcMbTa0LlKgszUE6A4CZma32RsxhDXdvgcQ3xmUg==",
+    "@mantine/notifications@7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
+      "integrity": "sha512-08suBIh/EJuTnzF1/Aao73S534KXvD7MiEaRNPXG+vBFz57Lu4DOtyLG4mXju6eNK99KJziVlK7CMIv6ADcQNg==",
       "dependencies": [
         "@mantine/core",
         "@mantine/hooks",
@@ -406,8 +409,8 @@
         "react-transition-group"
       ]
     },
-    "@mantine/spotlight@7.14.0_@mantine+core@7.14.0__@mantine+hooks@7.14.0___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.0__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
-      "integrity": "sha512-/Xcjj6eGtOVw7Dj+O+bpSiYXRJiepQtyXxFoNrFTB39AAdxf8psd8Um1iC60YGXa+VRYocU8uWu0yP3D1hT7FQ==",
+    "@mantine/spotlight@7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
+      "integrity": "sha512-yQ7ROtlxn1KclEtPs8RN+yUvkwopvXvM2qqjKrDa/XtvugjYICcJzyop4W+uzddekrlk55Y0qaSAzMBUpqZg/w==",
       "dependencies": [
         "@mantine/core",
         "@mantine/hooks",
@@ -416,14 +419,14 @@
         "react-dom"
       ]
     },
-    "@mantine/store@7.14.0_react@18.3.1": {
-      "integrity": "sha512-qI0XnQZkHuWYbe9Mn6kFObka4x26RINnDpyJGSiK6on+VwDWGJ3gn1dfFlQa2zboVtA6OUXHyxDlwALHNJwiZw==",
+    "@mantine/store@7.14.1_react@18.3.1": {
+      "integrity": "sha512-wpemDaqOJc1zsvnjaic1+KRQSy7dZhQ4XDwxqqq5MwG6aImCHqEBVf17Qhj3sDjpA7pnpxnKAHotLqfzjQn3dQ==",
       "dependencies": [
         "react"
       ]
     },
-    "@mantine/vanilla-extract@7.14.0_@mantine+core@7.14.0__@mantine+hooks@7.14.0___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.0__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
-      "integrity": "sha512-RasU6FatqGIw7N0xoIuc/C4/7eIyZvipkwppnNai1Sra6bW0B4/2VwHUzHwzGFtC4I/hOxaXfFYTkTgpxTxdMQ==",
+    "@mantine/vanilla-extract@7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
+      "integrity": "sha512-V7ujoCvFBwwlqfZDbgWeRyajD7IqemryBSnwEAn05qnl1jlRp6SnkeLX3ozkChCTHSEZTNFGn67sZOURO8osug==",
       "dependencies": [
         "@mantine/core"
       ]
@@ -485,6 +488,9 @@
         "fastq"
       ]
     },
+    "@remix-run/router@1.21.0": {
+      "integrity": "sha512-xfSkCAchbdG5PnbrKqFWwia4Bi61nH+wm8wLEqfHDyp7Y3dZzgqS2itV8i4gAq9pC2HsTpwyBC6Ds8VHZ96JlA=="
+    },
     "@rollup/rollup-android-arm-eabi@4.26.0": {
       "integrity": "sha512-gJNwtPDGEaOEgejbaseY6xMFu+CPltsc8/T+diUTTbOQLqD+bnrJq9ulH6WD69TqwqWmrfRAtUv30cCFZlbGTQ=="
     },
@@ -538,6 +544,16 @@
     },
     "@rollup/rollup-win32-x64-msvc@4.26.0": {
       "integrity": "sha512-2x8MO1rm4PGEP0xWbubJW5RtbNLk3puzAMaLQd3B3JHVw4KcHlmXcO+Wewx9zCoo7EUFiMlu/aZbCJ7VjMzAag=="
+    },
+    "@tabler/icons-react@3.22.0_react@18.3.1": {
+      "integrity": "sha512-pOnn+IqZpnkYsEKRvbXXLXwXhYwg4cy1fEVr5SRrgAYJXkobpDjFTdVHlab0HEBXY5AE1NjsMlVeK6H/8Vv2uQ==",
+      "dependencies": [
+        "@tabler/icons",
+        "react"
+      ]
+    },
+    "@tabler/icons@3.22.0": {
+      "integrity": "sha512-IfgGzhFph5OBr2wTieWL/hyAs0FThnq9O155a6kfGYxqx7h5LQw91wnRswhEaGhXCcfmR7ZVDUr9H+x4b9Pb8g=="
     },
     "@ts-morph/common@0.25.0": {
       "integrity": "sha512-kMnZz+vGGHi4GoHnLmMhGNjm44kGtKUXGnOvrKmMwAuvNjM/PgKVGfUnL7IDvK7Jb2QQ82jq3Zmp04Gy+r3Dkg==",
@@ -917,8 +933,8 @@
         "function-bind"
       ]
     },
-    "hono@4.6.10": {
-      "integrity": "sha512-IXXNfRAZEahFnWBhUUlqKEGF9upeE6hZoRZszvNkyAz/CYp+iVbxm3viMvStlagRJohjlBRGOQ7f4jfcV0XMGg=="
+    "hono@4.6.11": {
+      "integrity": "sha512-f0LwJQFKdUUrCUAVowxSvNCjyzI7ZLt8XWYU/EApyeq5FfOvHFarBaE5rjU9HTNFk4RI0FkdB2edb3p/7xZjzQ=="
     },
     "ignore@5.3.2": {
       "integrity": "sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g=="
@@ -1255,6 +1271,18 @@
         "scheduler"
       ]
     },
+    "react-fast-compare@3.2.2": {
+      "integrity": "sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ=="
+    },
+    "react-helmet-async@2.0.5_react@18.3.1": {
+      "integrity": "sha512-rYUYHeus+i27MvFE+Jaa4WsyBKGkL6qVgbJvSBoX8mbsWoABJXdEO0bZyi0F6i+4f0NuIb8AvqPMj3iXFHkMwg==",
+      "dependencies": [
+        "invariant",
+        "react",
+        "react-fast-compare",
+        "shallowequal"
+      ]
+    },
     "react-is@16.13.1": {
       "integrity": "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
     },
@@ -1287,6 +1315,22 @@
         "tslib",
         "use-callback-ref",
         "use-sidecar"
+      ]
+    },
+    "react-router-dom@6.28.0_react@18.3.1_react-dom@18.3.1__react@18.3.1": {
+      "integrity": "sha512-kQ7Unsl5YdyOltsPGl31zOjLrDv+m2VcIEcIHqYYD3Lp0UppLjrzcfJqDJwXxFw3TH/yvapbnUvPlAj7Kx5nbg==",
+      "dependencies": [
+        "@remix-run/router",
+        "react",
+        "react-dom",
+        "react-router"
+      ]
+    },
+    "react-router@6.28.0_react@18.3.1": {
+      "integrity": "sha512-HrYdIFqdrnhDw0PqG/AKjAqEqM7AvxCz0DQ4h2W8k6nqmc5uRBYDag0SBxx9iYz5G8gnuNVLzUe13wl9eAsXXg==",
+      "dependencies": [
+        "@remix-run/router",
+        "react"
       ]
     },
     "react-style-singleton@2.2.1_@types+react@18.3.12_react@18.3.1": {
@@ -1394,6 +1438,9 @@
     "semver@6.3.1": {
       "integrity": "sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA=="
     },
+    "shallowequal@1.1.0": {
+      "integrity": "sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ=="
+    },
     "slash@3.0.0": {
       "integrity": "sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q=="
     },
@@ -1447,8 +1494,8 @@
     "tslib@2.8.1": {
       "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="
     },
-    "type-fest@4.26.1": {
-      "integrity": "sha512-yOGpmOAL7CkKe/91I5O3gPICmJNLJ1G4zFYVAsRHg7M64biSnPtRj0WNQt++bRkjYOqjWXrhnUw1utzmVErAdg=="
+    "type-fest@4.27.0": {
+      "integrity": "sha512-3IMSWgP7C5KSQqmo1wjhKrwsvXAtF33jO3QY+Uy++ia7hqvgSK6iXbbg5PbDBc1P2ZbNEDgejOrN4YooXvhwCw=="
     },
     "typescript@5.6.3": {
       "integrity": "sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw=="
@@ -1547,26 +1594,29 @@
       "jsr:@denorg/scrypt@^4.4.4",
       "jsr:@std/ulid@1",
       "npm:@hono/zod-validator@~0.4.1",
-      "npm:@mantine/core@^7.14.0",
-      "npm:@mantine/form@^7.14.0",
-      "npm:@mantine/hooks@^7.14.0",
-      "npm:@mantine/modals@^7.14.0",
-      "npm:@mantine/notifications@^7.14.0",
-      "npm:@mantine/spotlight@^7.14.0",
-      "npm:@mantine/vanilla-extract@^7.14.0",
+      "npm:@mantine/core@^7.14.1",
+      "npm:@mantine/form@^7.14.1",
+      "npm:@mantine/hooks@^7.14.1",
+      "npm:@mantine/modals@^7.14.1",
+      "npm:@mantine/notifications@^7.14.1",
+      "npm:@mantine/spotlight@^7.14.1",
+      "npm:@mantine/vanilla-extract@^7.14.1",
       "npm:@mikro-orm/core@^6.4.0",
       "npm:@mikro-orm/postgresql@^6.4.0",
       "npm:@mikro-orm/reflection@^6.4.0",
+      "npm:@tabler/icons-react@^3.22.0",
       "npm:@types/node@^22.9.0",
       "npm:@types/react-dom@^18.3.1",
       "npm:@types/react@^18.3.12",
       "npm:@vanilla-extract/vite-plugin@^4.0.17",
       "npm:@vitejs/plugin-react@^4.3.3",
-      "npm:hono@^4.6.10",
+      "npm:hono@^4.6.11",
       "npm:postcss-preset-mantine@^1.17.0",
       "npm:postcss-simple-vars@^7.0.1",
       "npm:postcss@^8.4.49",
       "npm:react-dom@^18.3.1",
+      "npm:react-helmet-async@^2.0.5",
+      "npm:react-router-dom@^6.28.0",
       "npm:react@^18.3.1",
       "npm:typescript@^5.6.3",
       "npm:vite@^5.4.11",

@@ -1,9 +1,11 @@
 name: Deploy
 on:
   push:
-    branches: master
+    branches:
+      - master
   pull_request:
-    branches: master
+    branches:
+      - master
 
 jobs:
   deploy:
@@ -29,7 +31,7 @@ jobs:
           node-version: lts/*
 
       - name: Install step
-        run: "deno install"
+        run: "deno install -q"
 
       - name: Build step
         run: "deno task build"
