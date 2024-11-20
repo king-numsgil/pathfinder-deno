@@ -20,6 +20,7 @@
     "npm:@mikro-orm/core@^6.4.0": "6.4.0",
     "npm:@mikro-orm/postgresql@^6.4.0": "6.4.0_@mikro-orm+core@6.4.0",
     "npm:@mikro-orm/reflection@^6.4.0": "6.4.0_@mikro-orm+core@6.4.0",
+    "npm:@radix-ui/react-icons@^1.3.2": "1.3.2_react@18.3.1",
     "npm:@types/node@^22.9.0": "22.9.0",
     "npm:@types/react-dom@^18.3.1": "18.3.1",
     "npm:@types/react@^18.3.12": "18.3.12",
@@ -485,6 +486,12 @@
       "dependencies": [
         "@nodelib/fs.scandir",
         "fastq"
+      ]
+    },
+    "@radix-ui/react-icons@1.3.2_react@18.3.1": {
+      "integrity": "sha512-fyQIhGDhzfc9pK2kH6Pl9c4BDJGfMkPqkyIgYDthyNYoNg3wVhoJMMh19WS4Up/1KMPFVpNsT2q3WmXn2N1m6g==",
+      "dependencies": [
+        "react"
       ]
     },
     "@remix-run/router@1.21.0": {
@@ -1593,6 +1600,7 @@
       "npm:@mikro-orm/core@^6.4.0",
       "npm:@mikro-orm/postgresql@^6.4.0",
       "npm:@mikro-orm/reflection@^6.4.0",
+      "npm:@radix-ui/react-icons@^1.3.2",
       "npm:@types/node@^22.9.0",
       "npm:@types/react-dom@^18.3.1",
       "npm:@types/react@^18.3.12",
