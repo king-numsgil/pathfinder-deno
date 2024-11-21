@@ -1,8 +1,10 @@
-import { AppShell, Group, Container, Text, rem } from "@mantine/core";
+import { AppShell, Group, Container, Stack, Text, rem } from "@mantine/core";
 import { useHeadroom } from "@mantine/hooks";
 
 // @ts-types="@types/react"
 import type { FC, PropsWithChildren } from "react";
+
+import {NavbarLink} from "@/components/NavbarLink.tsx";
 
 export const RootLayout: FC<PropsWithChildren> = ({ children }) => {
     const pinned = useHeadroom({ fixedAt: 120 });
@@ -18,7 +20,15 @@ export const RootLayout: FC<PropsWithChildren> = ({ children }) => {
                     >
                         Numsgil Co
                     </Text>
-                    <Text>Menu goes here</Text>
+                    <Stack>
+                        <Group>
+                            <NavbarLink
+                                to="/"
+                            >
+                                Home
+                            </NavbarLink>
+                        </Group>
+                    </Stack>
                     <Text>User stuff</Text>
                 </Group>
             </AppShell.Header>
