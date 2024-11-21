@@ -33,7 +33,7 @@ export function viteMiddleware() {
                     ),
                 } as IncomingMessage,
                 {
-                    setHeader(name, value: any) {
+                    setHeader(name, value: string) {
                         headers.set(name, value);
                         return this;
                     },

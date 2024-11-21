@@ -1,13 +1,47 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { MantineProvider } from "@mantine/core";
+import { HelmetProvider } from "react-helmet-async";
+
 // @ts-types="@types/react-dom/client"
 import { createRoot } from "react-dom/client";
 // @ts-types="@types/react"
-import { StrictMode } from "react";
+import { FC, StrictMode } from "react";
 
-import "@mantine/core/styles.css";
-import "@mantine/spotlight/styles.css";
 import "@mantine/notifications/styles.css";
+import "@mantine/spotlight/styles.css";
+import "@mantine/core/styles.css";
 
-import { App } from "@/App.tsx";
+import { cssVariableResolver, theme } from "@/theme/index.ts";
+import { routes } from "@/pages/index.tsx";
+
+const router = createBrowserRouter(routes, {
+    future: {
+        v7_relativeSplatPath: true,
+        v7_partialHydration: true,
+        v7_normalizeFormMethod: true,
+        v7_fetcherPersist: true,
+        v7_skipActionErrorRevalidation: true,
+    },
+});
+
+export const App: FC = () => {
+    return (
+        <HelmetProvider>
+            <MantineProvider
+                forceColorScheme="dark"
+                cssVariablesResolver={cssVariableResolver}
+                theme={theme}
+            >
+                <RouterProvider
+                    router={router}
+                    future={{
+                        v7_startTransition: true,
+                    }}
+                />
+            </MantineProvider>
+        </HelmetProvider>
+    );
+};
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
