@@ -1,3 +1,4 @@
+import { themeToVars } from "@mantine/vanilla-extract";
 import { Spotlight } from "@mantine/spotlight";
 import {
     Anchor,
@@ -545,3 +546,4 @@ export const theme = createTheme({
         // DatePicker: used static classes to style the date picker
     },
 });
+export const vars = themeToVars(theme);

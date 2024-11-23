@@ -36,6 +36,7 @@
         "@types/node": "npm:@types/node@^22.9.1",
         "@types/react": "npm:@types/react@^18.3.12",
         "@types/react-dom": "npm:@types/react-dom@^18.3.1",
+        "@vanilla-extract/css": "npm:@vanilla-extract/css@^1.16.0",
         "@vanilla-extract/vite-plugin": "npm:@vanilla-extract/vite-plugin@^4.0.17",
         "@vitejs/plugin-react": "npm:@vitejs/plugin-react@^4.3.3",
         "hono": "npm:hono@^4.6.11",
