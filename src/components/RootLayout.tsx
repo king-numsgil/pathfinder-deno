@@ -23,10 +23,9 @@ export const RootLayout: FC<PropsWithChildren> = ({ children }) => {
                     <Stack>
                         <Group>
                             <NavbarLink
+                                label="Home"
                                 to="/"
-                            >
-                                Home
-                            </NavbarLink>
+                            />
                         </Group>
                     </Stack>
                     <Text>User stuff</Text>
