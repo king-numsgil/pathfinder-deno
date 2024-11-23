@@ -38,7 +38,6 @@ const listener = async () => {
 Deno.addSignalListener("SIGINT", listener);
 if (Deno.build.os !== "windows") {
     Deno.addSignalListener("SIGTERM", listener);
-    Deno.addSignalListener("SIGKILL", listener);
 }
 
 Deno.serve({ port: 3000 }, app.fetch);
