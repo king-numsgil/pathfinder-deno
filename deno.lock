@@ -10,23 +10,23 @@
     "jsr:@std/fmt@~0.222.1": "0.222.1",
     "jsr:@std/ulid@1": "1.0.0",
     "npm:@hono/zod-validator@~0.4.1": "0.4.1_hono@4.6.11_zod@3.23.8",
-    "npm:@mantine/core@^7.14.1": "7.14.1_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
-    "npm:@mantine/form@^7.14.1": "7.14.1_react@18.3.1",
-    "npm:@mantine/hooks@^7.14.1": "7.14.1_react@18.3.1",
-    "npm:@mantine/modals@^7.14.1": "7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
-    "npm:@mantine/notifications@^7.14.1": "7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
-    "npm:@mantine/spotlight@^7.14.1": "7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
-    "npm:@mantine/vanilla-extract@^7.14.1": "7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
+    "npm:@mantine/core@^7.14.2": "7.14.2_@mantine+hooks@7.14.2__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
+    "npm:@mantine/form@^7.14.2": "7.14.2_react@18.3.1",
+    "npm:@mantine/hooks@^7.14.2": "7.14.2_react@18.3.1",
+    "npm:@mantine/modals@^7.14.2": "7.14.2_@mantine+core@7.14.2__@mantine+hooks@7.14.2___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.2__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
+    "npm:@mantine/notifications@^7.14.2": "7.14.2_@mantine+core@7.14.2__@mantine+hooks@7.14.2___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.2__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
+    "npm:@mantine/spotlight@^7.14.2": "7.14.2_@mantine+core@7.14.2__@mantine+hooks@7.14.2___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.2__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
+    "npm:@mantine/vanilla-extract@^7.14.2": "7.14.2_@mantine+core@7.14.2__@mantine+hooks@7.14.2___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.2__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12",
     "npm:@mikro-orm/core@^6.4.0": "6.4.0",
     "npm:@mikro-orm/postgresql@^6.4.0": "6.4.0_@mikro-orm+core@6.4.0",
     "npm:@mikro-orm/reflection@^6.4.0": "6.4.0_@mikro-orm+core@6.4.0",
     "npm:@radix-ui/react-icons@^1.3.2": "1.3.2_react@18.3.1",
     "npm:@types/node@^22.9.0": "22.9.0",
-    "npm:@types/node@^22.9.1": "22.9.1",
+    "npm:@types/node@^22.9.3": "22.9.3",
     "npm:@types/react-dom@^18.3.1": "18.3.1",
     "npm:@types/react@^18.3.12": "18.3.12",
-    "npm:@vanilla-extract/css@^1.16.0": "1.16.0",
-    "npm:@vanilla-extract/vite-plugin@^4.0.17": "4.0.17_vite@5.4.11__@types+node@22.9.0_@types+node@22.9.0",
+    "npm:@vanilla-extract/css@^1.16.1": "1.16.1",
+    "npm:@vanilla-extract/vite-plugin@^4.0.18": "4.0.18_vite@5.4.11__@types+node@22.9.0_@types+node@22.9.0",
     "npm:@vitejs/plugin-react@^4.3.3": "4.3.3_vite@5.4.11__@types+node@22.9.0_@babel+core@7.26.0_@types+node@22.9.0",
     "npm:hono@^4.6.11": "4.6.11",
     "npm:postcss-preset-mantine@^1.17.0": "1.17.0_postcss@8.4.49",
@@ -36,7 +36,7 @@
     "npm:react-helmet-async@^2.0.5": "2.0.5_react@18.3.1",
     "npm:react-router-dom@^7.0.1": "7.0.1_react@18.3.1_react-dom@18.3.1__react@18.3.1",
     "npm:react@^18.3.1": "18.3.1",
-    "npm:typescript@^5.6.3": "5.6.3",
+    "npm:typescript@^5.7.2": "5.7.2",
     "npm:vite@^5.4.11": "5.4.11_@types+node@22.9.0",
     "npm:zod@^3.23.8": "3.23.8"
   },
@@ -363,8 +363,8 @@
         "@jridgewell/sourcemap-codec"
       ]
     },
-    "@mantine/core@7.14.1_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
-      "integrity": "sha512-oHqaOE1n4KJkvJgF628OCVXE2zUgkEotEsPUdVaC58qRfJ7SvZAI26JNbUG8+MoqHHEqHKtBaRkTyuEVMbomxw==",
+    "@mantine/core@7.14.2_@mantine+hooks@7.14.2__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
+      "integrity": "sha512-lq5l8T6TRkaCbs3HeaRDvUG80JbrwCxQPF5pwNP4yRrdln99hWpGtyNm0DSfcN5u1eOQRudOtAc+R8TfU+2GXw==",
       "dependencies": [
         "@floating-ui/react",
         "@mantine/hooks",
@@ -377,22 +377,22 @@
         "type-fest"
       ]
     },
-    "@mantine/form@7.14.1_react@18.3.1": {
-      "integrity": "sha512-ziYsTsFhR1sEjGebwahKr7LRRFQQtH47o+rPLbvD0FGb6aYRVQgaebQo4jVgxFIgqiafxGNEpD6GkPBqmCmU4g==",
+    "@mantine/form@7.14.2_react@18.3.1": {
+      "integrity": "sha512-IXgvEjIivXBNU4+sRinXGCSziRpx+pVeazuZixU3BxiSBap36gLxCbcWiyG3PkI4NkfI70YTTWFFeX39C06lzg==",
       "dependencies": [
         "fast-deep-equal",
         "klona",
         "react"
       ]
     },
-    "@mantine/hooks@7.14.1_react@18.3.1": {
-      "integrity": "sha512-VlgTyV/9WNFCwCshW1KHMYNzLt+M8aG68E1lWaqOXtyWSLJo+X5zQJGg0f8bwGbJvIMQCpQd0yTLfnjD6uAtrA==",
+    "@mantine/hooks@7.14.2_react@18.3.1": {
+      "integrity": "sha512-WN0bEJHw2Lh/2PLqik8rqITJRZAu6A1FK6f+H0SNTrQuWYBPSHdNTqM8hntDnhpM/2mZ52t3VWYgvNVGczLxIw==",
       "dependencies": [
         "react"
       ]
     },
-    "@mantine/modals@7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
-      "integrity": "sha512-jpcRS5fzD+CPRJ7mebA9lt0bmSI+2lJVZloG7SPIY3S66ZtUsEis0fHkDtuAqGANbhr43Enjhno0M+4x9IzuZw==",
+    "@mantine/modals@7.14.2_@mantine+core@7.14.2__@mantine+hooks@7.14.2___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.2__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
+      "integrity": "sha512-Sr8JRS5waZGnUZwKK9tB2m/Z78l3lkg4TZsrtJiTivaM6+xSyANSiGuVLtiCpsZ/CdtrG9KVcm7wzZilLhpWTA==",
       "dependencies": [
         "@mantine/core",
         "@mantine/hooks",
@@ -400,8 +400,8 @@
         "react-dom"
       ]
     },
-    "@mantine/notifications@7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
-      "integrity": "sha512-08suBIh/EJuTnzF1/Aao73S534KXvD7MiEaRNPXG+vBFz57Lu4DOtyLG4mXju6eNK99KJziVlK7CMIv6ADcQNg==",
+    "@mantine/notifications@7.14.2_@mantine+core@7.14.2__@mantine+hooks@7.14.2___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.2__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
+      "integrity": "sha512-BXafA7YeDNwziFkZ0BnK5iEN0Cw3CRk/pnZ6E6u9eGCve5iMkaCTk0LaKnT2DPmPaAqEgmnnRduy6Akaalzjhw==",
       "dependencies": [
         "@mantine/core",
         "@mantine/hooks",
@@ -411,8 +411,8 @@
         "react-transition-group"
       ]
     },
-    "@mantine/spotlight@7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
-      "integrity": "sha512-yQ7ROtlxn1KclEtPs8RN+yUvkwopvXvM2qqjKrDa/XtvugjYICcJzyop4W+uzddekrlk55Y0qaSAzMBUpqZg/w==",
+    "@mantine/spotlight@7.14.2_@mantine+core@7.14.2__@mantine+hooks@7.14.2___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.2__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
+      "integrity": "sha512-wGr5d8W8/OiquNilBGv6sBD2Sl5RlsGiySEGDzeF6N2eFzkyIuKQzUM8zKlmJTRsoEmojIvvVfXSubB78KlBzw==",
       "dependencies": [
         "@mantine/core",
         "@mantine/hooks",
@@ -421,14 +421,14 @@
         "react-dom"
       ]
     },
-    "@mantine/store@7.14.1_react@18.3.1": {
-      "integrity": "sha512-wpemDaqOJc1zsvnjaic1+KRQSy7dZhQ4XDwxqqq5MwG6aImCHqEBVf17Qhj3sDjpA7pnpxnKAHotLqfzjQn3dQ==",
+    "@mantine/store@7.14.2_react@18.3.1": {
+      "integrity": "sha512-OCur2rymfOw+tEFDQjUvVoAGl9DRnyIZ6gJyGaj73hrxSMUyrdsekdYwN5HpbI6qXqW0h7u1aV0tNf0vvIUQDA==",
       "dependencies": [
         "react"
       ]
     },
-    "@mantine/vanilla-extract@7.14.1_@mantine+core@7.14.1__@mantine+hooks@7.14.1___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.1__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
-      "integrity": "sha512-V7ujoCvFBwwlqfZDbgWeRyajD7IqemryBSnwEAn05qnl1jlRp6SnkeLX3ozkChCTHSEZTNFGn67sZOURO8osug==",
+    "@mantine/vanilla-extract@7.14.2_@mantine+core@7.14.2__@mantine+hooks@7.14.2___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.12_@mantine+hooks@7.14.2__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.12": {
+      "integrity": "sha512-Sn8isyqSCF5juNJvhPPiGwr8kYM4GGCDe8/JmRIw3njVB8kZrixZDabn7KSzwmnsssMfd/JvpIBNh0bdRtPAkw==",
       "dependencies": [
         "@mantine/core"
       ]
@@ -605,8 +605,8 @@
         "undici-types"
       ]
     },
-    "@types/node@22.9.1": {
-      "integrity": "sha512-p8Yy/8sw1caA8CdRIQBG5tiLHmxtQKObCijiAa9Ez+d4+PRffM4054xbju0msf+cvhJpnFEeNjxmVT/0ipktrg==",
+    "@types/node@22.9.3": {
+      "integrity": "sha512-F3u1fs/fce3FFk+DAxbxc78DF8x0cY09RRL8GnXLmkJ1jvx3TtPdWoTT5/NiYfI5ASqXBmfqJi9dZ3gxMx4lzw==",
       "dependencies": [
         "undici-types"
       ]
@@ -633,8 +633,8 @@
         "@babel/core"
       ]
     },
-    "@vanilla-extract/css@1.16.0": {
-      "integrity": "sha512-05JTbvG1E0IrSZKZ5el2EM9CmAX0XSdsNY+d4aRZxDvYf3/hwxomvFFEz2b/awjgg9yTVHW83Wq19wE4OoTEMg==",
+    "@vanilla-extract/css@1.16.1": {
+      "integrity": "sha512-3jKxH5ty/ZjmGoLAx8liY7e87FRCIJfnuufX/K9fQklu0YHP3ClrNisU++LkZuD+GZleqMSAQMF0r8Otln+OPQ==",
       "dependencies": [
         "@emotion/hash",
         "@vanilla-extract/private",
@@ -650,8 +650,8 @@
         "picocolors"
       ]
     },
-    "@vanilla-extract/integration@7.1.10_@babel+core@7.26.0_@types+node@22.9.0": {
-      "integrity": "sha512-EXe8l0u51ta2H78kksf7gJENkdYnvDW9c+18FUvKfxtjHmpc4KthXnUTuALt5k9wbAjfFakIR4IsqzvOP43cDQ==",
+    "@vanilla-extract/integration@7.1.11_@babel+core@7.26.0_@types+node@22.9.0": {
+      "integrity": "sha512-IGRaLrpkjyVHTHDZQBQvFBl399yRfSMJoVI2KaocEZB33aP+H4Qup83od2hc6R5IxGWdvbiiCOJCYsnmFiy85Q==",
       "dependencies": [
         "@babel/core",
         "@babel/plugin-syntax-typescript",
@@ -670,8 +670,8 @@
     "@vanilla-extract/private@1.0.6": {
       "integrity": "sha512-ytsG/JLweEjw7DBuZ/0JCN4WAQgM9erfSTdS1NQY778hFQSZ6cfCDEZZ0sgVm4k54uNz6ImKB33AYvSR//fjxw=="
     },
-    "@vanilla-extract/vite-plugin@4.0.17_vite@5.4.11__@types+node@22.9.0_@types+node@22.9.0": {
-      "integrity": "sha512-qyAEmBcwih7E3lMrcFZX1Ph81TQos1FFyxOu5JmNmu/F/g7HkcCXFV897pNKFmXgED/TzuyrFVcIRimg5pPc9A==",
+    "@vanilla-extract/vite-plugin@4.0.18_vite@5.4.11__@types+node@22.9.0_@types+node@22.9.0": {
+      "integrity": "sha512-j5vJVbvW33THGXG3ZI+nfgeYCknlBEWTJVphZWSAGmLO4XO4690m/iQQg+3gUtla3wvU8eyA2qmJNa05Wa7mVA==",
       "dependencies": [
         "@vanilla-extract/integration",
         "vite"
@@ -1353,8 +1353,8 @@
         "tslib"
       ]
     },
-    "react-textarea-autosize@8.5.4_react@18.3.1": {
-      "integrity": "sha512-eSSjVtRLcLfFwFcariT77t9hcbVJHQV76b51QjQGarQIHml2+gM2lms0n3XrhnDmgK5B+/Z7TmQk5OHNzqYm/A==",
+    "react-textarea-autosize@8.5.5_react@18.3.1": {
+      "integrity": "sha512-CVA94zmfp8m4bSHtWwmANaBR8EPsKy2aZ7KwqhoS4Ftib87F9Kvi7XQhOixypPLMc6kVYgOXvKFuuzZDpHGRPg==",
       "dependencies": [
         "@babel/runtime",
         "react",
@@ -1510,11 +1510,11 @@
     "turbo-stream@2.4.0": {
       "integrity": "sha512-FHncC10WpBd2eOmGwpmQsWLDoK4cqsA/UT/GqNoaKOQnT8uzhtCbg3EoUDMvqpOSAI0S26mr0rkjzbOO6S3v1g=="
     },
-    "type-fest@4.27.0": {
-      "integrity": "sha512-3IMSWgP7C5KSQqmo1wjhKrwsvXAtF33jO3QY+Uy++ia7hqvgSK6iXbbg5PbDBc1P2ZbNEDgejOrN4YooXvhwCw=="
+    "type-fest@4.28.0": {
+      "integrity": "sha512-jXMwges/FVbFRe5lTMJZVEZCrO9kI9c8k0PA/z7nF3bo0JSCCLysvokFjNPIUK/itEMas10MQM+AiHoHt/T/XA=="
     },
-    "typescript@5.6.3": {
-      "integrity": "sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw=="
+    "typescript@5.7.2": {
+      "integrity": "sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg=="
     },
     "ufo@1.5.4": {
       "integrity": "sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ=="
@@ -1610,22 +1610,22 @@
       "jsr:@denorg/scrypt@^4.4.4",
       "jsr:@std/ulid@1",
       "npm:@hono/zod-validator@~0.4.1",
-      "npm:@mantine/core@^7.14.1",
-      "npm:@mantine/form@^7.14.1",
-      "npm:@mantine/hooks@^7.14.1",
-      "npm:@mantine/modals@^7.14.1",
-      "npm:@mantine/notifications@^7.14.1",
-      "npm:@mantine/spotlight@^7.14.1",
-      "npm:@mantine/vanilla-extract@^7.14.1",
+      "npm:@mantine/core@^7.14.2",
+      "npm:@mantine/form@^7.14.2",
+      "npm:@mantine/hooks@^7.14.2",
+      "npm:@mantine/modals@^7.14.2",
+      "npm:@mantine/notifications@^7.14.2",
+      "npm:@mantine/spotlight@^7.14.2",
+      "npm:@mantine/vanilla-extract@^7.14.2",
       "npm:@mikro-orm/core@^6.4.0",
       "npm:@mikro-orm/postgresql@^6.4.0",
       "npm:@mikro-orm/reflection@^6.4.0",
       "npm:@radix-ui/react-icons@^1.3.2",
-      "npm:@types/node@^22.9.1",
+      "npm:@types/node@^22.9.3",
       "npm:@types/react-dom@^18.3.1",
       "npm:@types/react@^18.3.12",
-      "npm:@vanilla-extract/css@^1.16.0",
-      "npm:@vanilla-extract/vite-plugin@^4.0.17",
+      "npm:@vanilla-extract/css@^1.16.1",
+      "npm:@vanilla-extract/vite-plugin@^4.0.18",
       "npm:@vitejs/plugin-react@^4.3.3",
       "npm:hono@^4.6.11",
       "npm:postcss-preset-mantine@^1.17.0",
@@ -1635,7 +1635,7 @@
       "npm:react-helmet-async@^2.0.5",
       "npm:react-router-dom@^7.0.1",
       "npm:react@^18.3.1",
-      "npm:typescript@^5.6.3",
+      "npm:typescript@^5.7.2",
       "npm:vite@^5.4.11",
       "npm:zod@^3.23.8"
     ]
