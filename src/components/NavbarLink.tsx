@@ -31,7 +31,7 @@ type RouterNavLinkConditionalProps =
 type NavbarLinkProps = RouterNavLinkBaseProps & RouterNavLinkConditionalProps;
 
 export const NavbarLink: FC<NavbarLinkProps> = (
-    { label, description, leftSection, rightSection, disabled, defaultOpened, children, to },
+    { defaultOpened, children, to, ...props },
 ) => {
     return (
         <NavLink
@@ -46,13 +46,9 @@ export const NavbarLink: FC<NavbarLinkProps> = (
             classNames={{
                 root,
             }}
-            label={label}
-            description={description}
-            leftSection={leftSection}
-            rightSection={rightSection}
-            disabled={disabled}
             defaultOpened={defaultOpened ?? true}
             childrenOffset={children === undefined ? undefined : 28}
+            {...props}
         >
             {children}
         </NavLink>
