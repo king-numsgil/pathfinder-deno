@@ -1,3 +1,4 @@
+import { prettyJSON } from "hono/pretty-json";
 import { serveStatic } from "hono/deno";
 import { logger } from "hono/logger";
 import { Hono } from "hono";
@@ -6,7 +7,7 @@ import { api } from "@/api/index.ts";
 import db from "@/database/index.ts";
 
 const app = new Hono();
-app.use(logger());
+app.use(logger(), prettyJSON());
 
 app.route("/api", api);
 
@@ -14,19 +15,8 @@ if (Deno.env.get("NODE_ENV") !== "production") {
     const { viteMiddleware } = await import("@/viteMiddleware.ts");
     app.all("/*", viteMiddleware());
 } else {
-    app.get(
-        "/",
-        serveStatic({ path: "./dist/index.html" }),
-    );
-    app.get(
-        "*",
-        serveStatic({
-            root: "./dist",
-            onNotFound(_path, c) {
-                c.redirect("/");
-            },
-        }),
-    );
+    app.all("/", serveStatic({ path: "./dist/index.html" }));
+    app.all("*", serveStatic({ root: "./dist" }));
 }
 
 const listener = async () => {

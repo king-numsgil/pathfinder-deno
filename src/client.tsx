@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import { MantineProvider } from "@mantine/core";
 import { HelmetProvider } from "react-helmet-async";
 
@@ -14,7 +14,7 @@ import "@mantine/core/styles.css";
 import { cssVariableResolver, theme } from "@/theme/index.ts";
 import { routes } from "@/pages/index.tsx";
 
-const router = createBrowserRouter(routes, {
+const router = createHashRouter(routes, {
     future: {
         v7_relativeSplatPath: true,
         v7_fetcherPersist: true,
