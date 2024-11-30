@@ -16,7 +16,7 @@ export const RootLayout: FC<PropsWithChildren> = ({ children }) => {
             padding="md"
             withBorder={false}
         >
-            <AppShell.Header withBorder>
+            <AppShell.Header bg="green.9">
                 <Group h="100%" px="md" justify="space-between">
                     <Text
                         size="xl"
@@ -31,7 +31,7 @@ export const RootLayout: FC<PropsWithChildren> = ({ children }) => {
                 </Group>
             </AppShell.Header>
 
-            <AppShell.Navbar>
+            <AppShell.Navbar bg="green.9">
                 <NavbarLink label="Home" to="/" />
                 <NavbarLink label="Pathfinder">
                     <NavbarLink label="Spells" to="/pathfinder/spells" />
@@ -40,7 +40,7 @@ export const RootLayout: FC<PropsWithChildren> = ({ children }) => {
             </AppShell.Navbar>
 
             <AppShell.Main>
-                <Container fluid>
+                <Container p={0} fluid>
                     {children}
                 </Container>
             </AppShell.Main>
