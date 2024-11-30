@@ -1,4 +1,4 @@
-import { defineConfig } from "@mikro-orm/postgresql";
+import { defineConfig } from "@mikro-orm/sqlite";
 
 import { Bloodline, BloodlineSpell } from "@/api/pathfinder/entities/Bloodline.entity.ts";
 import { Class, ClassSpell } from "@/api/pathfinder/entities/Class.entity.ts";
@@ -17,10 +17,8 @@ import {
     FeatPrerequisite_Stat,
 } from "@/api/pathfinder/entities/Feat.entity.ts";
 
-import { env } from "@/env.ts";
-
 export default defineConfig({
-    clientUrl: env.database,
+    dbName: "pathfinder.db",
     forceUndefined: true,
 
     entities: [

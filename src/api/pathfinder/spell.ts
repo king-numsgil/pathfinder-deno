@@ -39,7 +39,7 @@ spellApi.get(
 
         if (params.name && filter.$and) {
             filter.$and.push({
-                name: { $ilike: `%${params.name}%` },
+                name: { $like: `%${params.name}%` },
             });
         }
 

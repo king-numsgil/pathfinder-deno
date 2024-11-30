@@ -92,7 +92,7 @@ export class Spell {
     @Property({ nullable: true })
     permanencyCost: number | null = null;
 
-    @Enum({ items: () => Descriptor, nativeEnumName: "descriptor", default: [] })
+    @Enum({ items: () => Descriptor, nativeEnumName: "descriptor", default: [], array: true })
     descriptors: Descriptor[] = [];
 
     @Property({ nullable: true })
