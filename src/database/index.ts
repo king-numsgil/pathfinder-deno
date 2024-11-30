@@ -1,4 +1,4 @@
-import { EntityManager, RequestContext } from "@mikro-orm/postgresql";
+import { EntityManager, RequestContext } from "@mikro-orm/sqlite";
 import { createMiddleware } from "hono/factory";
 import { MikroORM } from "@mikro-orm/core";
 
