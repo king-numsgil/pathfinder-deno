@@ -1,7 +1,7 @@
 {
     "tasks": {
-        "serve": "deno run --allow-net --allow-read --allow-write --allow-env --allow-ffi --allow-run --allow-sys src/server.ts",
-        "refresh": "deno run --allow-net --allow-read --allow-write --allow-env --allow-ffi --allow-sys refresh.ts",
+        "serve": "deno run --allow-net --allow-read --allow-write --allow-env --allow-ffi --allow-run --allow-sys --env-file src/server.ts",
+        "refresh": "deno run --allow-net --allow-read --allow-write --allow-env --allow-sys --env-file refresh.ts",
         "build": "deno run -A npm:vite build"
     },
     "compilerOptions": {
@@ -29,7 +29,8 @@
         "@mantine/spotlight": "npm:@mantine/spotlight@^7.14.3",
         "@mantine/vanilla-extract": "npm:@mantine/vanilla-extract@^7.14.3",
         "@mikro-orm/core": "npm:@mikro-orm/core@^6.4.0",
-        "@mikro-orm/sqlite": "npm:@mikro-orm/sqlite@^6.4.0",
+        "@mikro-orm/postgresql": "npm:@mikro-orm/postgresql@^6.4.0",
+        "@mikro-orm/reflection": "npm:@mikro-orm/reflection@^6.4.0",
         "@radix-ui/react-icons": "npm:@radix-ui/react-icons@^1.3.2",
         "@std/ulid": "jsr:@std/ulid@^1.0.0",
         "@types/node": "npm:@types/node@^22.10.1",

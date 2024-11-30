@@ -14,13 +14,7 @@ domainApi.get("/", async (c) => {
         await repo.findOne({
             id: c.req.param("id"),
         }, {
-            populate: [
-                "deities",
-                "subdomains",
-                "spells",
-                "spells.spellLevel",
-                "spells.spell"
-            ],
+            populate: ["id", "name", "deities", "subdomains", "spells", "spells.spellLevel", "spells.spell"],
             populateOrderBy: {
                 spells: {
                     spellLevel: "asc",

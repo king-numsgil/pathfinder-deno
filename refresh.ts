@@ -355,13 +355,13 @@ console.log("Seeding spells...");
         row.race = spell.race;
 
         if (spell.school !== "see text") {
-            row.school = await em.getRepository(School).findOneOrFail({ name: { $like: spell.school } });
+            row.school = await em.getRepository(School).findOneOrFail({ name: { $ilike: spell.school } });
         }
 
         row.subschool = spell.subschool
-            ? await em.getRepository(Subschool).findOneOrFail({ name: { $like: spell.subschool } })
+            ? await em.getRepository(Subschool).findOneOrFail({ name: { $ilike: spell.subschool } })
             : null;
-        row.deity = spell.deity ? await em.getRepository(Deity).findOne({ name: { $like: spell.deity } }) : null;
+        row.deity = spell.deity ? await em.getRepository(Deity).findOne({ name: { $ilike: spell.deity } }) : null;
 
         if (spell.acid) {
             row.descriptors.push(Descriptor.Acid);
@@ -756,14 +756,14 @@ console.log("Seeding mysteries...");
             const spell = new MysterySpell();
             spell.classLevel = 2;
             spell.note = note;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: name} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: name} });
             em.persist(spell);
             mystery.spells.add(spell);
         } else {
             const spell = new MysterySpell();
             spell.classLevel = 2;
             spell.note = null;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: entry.Spells["Level 2"]} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: entry.Spells["Level 2"]} });
             em.persist(spell);
             mystery.spells.add(spell);
         }
@@ -773,14 +773,14 @@ console.log("Seeding mysteries...");
             const spell = new MysterySpell();
             spell.classLevel = 4;
             spell.note = note;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: name} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: name} });
             em.persist(spell);
             mystery.spells.add(spell);
         } else {
             const spell = new MysterySpell();
             spell.classLevel = 4;
             spell.note = null;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: entry.Spells["Level 4"]} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: entry.Spells["Level 4"]} });
             em.persist(spell);
             mystery.spells.add(spell);
         }
@@ -790,14 +790,14 @@ console.log("Seeding mysteries...");
             const spell = new MysterySpell();
             spell.classLevel = 6;
             spell.note = note;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: name} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: name} });
             em.persist(spell);
             mystery.spells.add(spell);
         } else {
             const spell = new MysterySpell();
             spell.classLevel = 6;
             spell.note = null;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: entry.Spells["Level 6"]} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: entry.Spells["Level 6"]} });
             em.persist(spell);
             mystery.spells.add(spell);
         }
@@ -807,14 +807,14 @@ console.log("Seeding mysteries...");
             const spell = new MysterySpell();
             spell.classLevel = 8;
             spell.note = note;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: name} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: name} });
             em.persist(spell);
             mystery.spells.add(spell);
         } else {
             const spell = new MysterySpell();
             spell.classLevel = 8;
             spell.note = null;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: entry.Spells["Level 8"]} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: entry.Spells["Level 8"]} });
             em.persist(spell);
             mystery.spells.add(spell);
         }
@@ -824,14 +824,14 @@ console.log("Seeding mysteries...");
             const spell = new MysterySpell();
             spell.classLevel = 10;
             spell.note = note;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: name} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: name} });
             em.persist(spell);
             mystery.spells.add(spell);
         } else {
             const spell = new MysterySpell();
             spell.classLevel = 10;
             spell.note = null;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: entry.Spells["Level 10"]} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: entry.Spells["Level 10"]} });
             em.persist(spell);
             mystery.spells.add(spell);
         }
@@ -841,14 +841,14 @@ console.log("Seeding mysteries...");
             const spell = new MysterySpell();
             spell.classLevel = 12;
             spell.note = note;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: name} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: name} });
             em.persist(spell);
             mystery.spells.add(spell);
         } else {
             const spell = new MysterySpell();
             spell.classLevel = 12;
             spell.note = null;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: entry.Spells["Level 12"]} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: entry.Spells["Level 12"]} });
             em.persist(spell);
             mystery.spells.add(spell);
         }
@@ -858,14 +858,14 @@ console.log("Seeding mysteries...");
             const spell = new MysterySpell();
             spell.classLevel = 14;
             spell.note = note;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: name} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: name} });
             em.persist(spell);
             mystery.spells.add(spell);
         } else {
             const spell = new MysterySpell();
             spell.classLevel = 14;
             spell.note = null;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: entry.Spells["Level 14"]} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: entry.Spells["Level 14"]} });
             em.persist(spell);
             mystery.spells.add(spell);
         }
@@ -875,14 +875,14 @@ console.log("Seeding mysteries...");
             const spell = new MysterySpell();
             spell.classLevel = 16;
             spell.note = note;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: name} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: name} });
             em.persist(spell);
             mystery.spells.add(spell);
         } else {
             const spell = new MysterySpell();
             spell.classLevel = 16;
             spell.note = null;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: entry.Spells["Level 16"]} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: entry.Spells["Level 16"]} });
             em.persist(spell);
             mystery.spells.add(spell);
         }
@@ -892,14 +892,14 @@ console.log("Seeding mysteries...");
             const spell = new MysterySpell();
             spell.classLevel = 18;
             spell.note = note;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: name} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: name} });
             em.persist(spell);
             mystery.spells.add(spell);
         } else {
             const spell = new MysterySpell();
             spell.classLevel = 18;
             spell.note = null;
-            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$like: entry.Spells["Level 18"]} });
+            spell.spell = await em.getRepository(Spell).findOneOrFail({ name: {$ilike: entry.Spells["Level 18"]} });
             em.persist(spell);
             mystery.spells.add(spell);
         }

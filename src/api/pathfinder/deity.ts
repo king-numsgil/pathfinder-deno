@@ -14,11 +14,7 @@ deityApi.get("/", async (c) => {
         await repo.findOne({
             id: c.req.param("id"),
         }, {
-            populate: [
-                "domains",
-                "subdomains",
-                "spells"
-            ],
+            populate: ["id", "name", "type", "alignment", "domains", "subdomains", "spells"],
         }) ?? [],
     );
 });

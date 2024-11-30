@@ -14,11 +14,7 @@ mysteryApi.get("/", async (c) => {
         await repo.findOne({
             id: c.req.param("id"),
         }, {
-            populate: [
-                "spells",
-                "spells.classLevel",
-                "spells.spell"
-            ],
+            populate: ["id", "name", "spells", "spells.classLevel", "spells.spell"],
             populateOrderBy: {
                 spells: {
                     classLevel: "asc",
