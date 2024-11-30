@@ -20,9 +20,6 @@ import {
 export default defineConfig({
     dbName: "pathfinder.db",
     forceUndefined: true,
-    driverOptions: {
-        readonly: Deno.env.get("NODE_ENV") === "production",
-    },
 
     entities: [
         Bloodline,
