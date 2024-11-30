@@ -29,7 +29,7 @@ jobs:
           node-version: lts/*
 
       - name: Install step
-        run: "deno install -q"
+        run: "deno install -q --allow-scripts=npm:sqlite3@5.1.7"
 
       - name: Build step
         run: "deno task build"
