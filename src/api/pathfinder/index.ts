@@ -10,17 +10,15 @@ import { schoolApi, subschoolApi } from "@/api/pathfinder/school.ts";
 import { spellApi } from "@/api/pathfinder/spell.ts";
 import { featApi } from "@/api/pathfinder/feat.ts";
 
-export const pfApi = new Hono();
-
-pfApi.route("/bloodline", bloodlineApi);
-pfApi.route("/class", classApi);
-pfApi.route("/deity", deityApi);
-pfApi.route("/domain", domainApi);
-pfApi.route("/subdomain", subdomainApi);
-pfApi.route("/mystery", mysteryApi);
-pfApi.route("/patron", patronApi);
-pfApi.route("/school", schoolApi);
-pfApi.route("/subschool", subschoolApi);
-
-pfApi.route("/spell", spellApi);
-pfApi.route("/feat", featApi);
+export const pfApi = new Hono()
+    .route("/bloodline", bloodlineApi)
+    .route("/class", classApi)
+    .route("/deity", deityApi)
+    .route("/domain", domainApi)
+    .route("/subdomain", subdomainApi)
+    .route("/mystery", mysteryApi)
+    .route("/patron", patronApi)
+    .route("/school", schoolApi)
+    .route("/subschool", subschoolApi)
+    .route("/spell", spellApi)
+    .route("/feat", featApi);

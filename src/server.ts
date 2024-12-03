@@ -6,10 +6,11 @@ import { Hono } from "hono";
 import { api } from "@/api/index.ts";
 import db from "@/database/index.ts";
 
-const app = new Hono();
-app.use(logger(), prettyJSON());
+const app = new Hono()
+    .use(logger(), prettyJSON())
+    .route("/api", api);
 
-app.route("/api", api);
+export type AppType = typeof app;
 
 if (Deno.env.get("NODE_ENV") !== "production") {
     const { viteMiddleware } = await import("@/viteMiddleware.ts");
