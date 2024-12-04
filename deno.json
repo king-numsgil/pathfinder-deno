@@ -46,9 +46,9 @@
         "react": "npm:react@^18.3.1",
         "react-dom": "npm:react-dom@^18.3.1",
         "react-helmet-async": "npm:react-helmet-async@^2.0.5",
-        "react-router-dom": "npm:react-router-dom@^7.0.1",
+        "react-router-dom": "npm:react-router-dom@^7.0.2",
         "typescript": "npm:typescript@^5.7.2",
-        "vite": "npm:vite@^6.0.1",
+        "vite": "npm:vite@^6.0.2",
         "zod": "npm:zod@^3.23.8"
     },
     "fmt": {
