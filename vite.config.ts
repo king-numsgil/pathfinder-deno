@@ -9,6 +9,9 @@ export default defineConfig({
         react(),
         vanillaExtractPlugin(),
     ],
+    build: {
+        sourcemap: "inline",
+    },
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src"),
