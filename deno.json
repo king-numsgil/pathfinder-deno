@@ -46,6 +46,7 @@
         "react": "npm:react@^18.3.1",
         "react-dom": "npm:react-dom@^18.3.1",
         "react-router-dom": "npm:react-router-dom@^7.0.2",
+        "swr": "npm:swr@^2.2.5",
         "typescript": "npm:typescript@^5.7.2",
         "vite": "npm:vite@^6.0.3",
         "zod": "npm:zod@^3.23.8"
