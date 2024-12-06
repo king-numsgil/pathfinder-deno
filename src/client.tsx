@@ -1,6 +1,5 @@
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import { MantineProvider } from "@mantine/core";
-import { HelmetProvider } from "react-helmet-async";
 
 // @ts-types="@types/react-dom/client"
 import { createRoot } from "react-dom/client";
@@ -29,20 +28,18 @@ const router = createHashRouter(routes, {
 
 export const App: FC = () => {
     return (
-        <HelmetProvider>
-            <MantineProvider
-                forceColorScheme="dark"
-                cssVariablesResolver={cssVariableResolver}
-                theme={theme}
-            >
-                <RouterProvider
-                    router={router}
-                    future={{
-                        v7_startTransition: true,
-                    }}
-                />
-            </MantineProvider>
-        </HelmetProvider>
+        <MantineProvider
+            forceColorScheme="dark"
+            cssVariablesResolver={cssVariableResolver}
+            theme={theme}
+        >
+            <RouterProvider
+                router={router}
+                future={{
+                    v7_startTransition: true,
+                }}
+            />
+        </MantineProvider>
     );
 };
 
