@@ -9,7 +9,7 @@
     "jsr:@std/encoding@~0.222.1": "0.222.1",
     "jsr:@std/fmt@~0.222.1": "0.222.1",
     "jsr:@std/ulid@1": "1.0.0",
-    "npm:@hono/zod-validator@~0.4.1": "0.4.1_hono@4.6.12_zod@3.23.8",
+    "npm:@hono/zod-validator@~0.4.1": "0.4.1_hono@4.6.13_zod@3.23.8",
     "npm:@mantine/core@^7.14.3": "7.14.3_@mantine+hooks@7.14.3__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.14",
     "npm:@mantine/form@^7.14.3": "7.14.3_react@18.3.1",
     "npm:@mantine/hooks@^7.14.3": "7.14.3_react@18.3.1",
@@ -19,7 +19,6 @@
     "npm:@mantine/vanilla-extract@^7.14.3": "7.14.3_@mantine+core@7.14.3__@mantine+hooks@7.14.3___react@18.3.1__react@18.3.1__react-dom@18.3.1___react@18.3.1__@types+react@18.3.14_@mantine+hooks@7.14.3__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.14",
     "npm:@mikro-orm/core@^6.4.0": "6.4.0",
     "npm:@mikro-orm/postgresql@^6.4.0": "6.4.0_@mikro-orm+core@6.4.0",
-    "npm:@mikro-orm/reflection@^6.4.0": "6.4.0_@mikro-orm+core@6.4.0",
     "npm:@radix-ui/react-icons@^1.3.2": "1.3.2_react@18.3.1",
     "npm:@tanstack/react-query@^5.62.3": "5.62.3_react@18.3.1",
     "npm:@types/node@^22.10.1": "22.10.1",
@@ -29,7 +28,7 @@
     "npm:@vanilla-extract/css@^1.16.1": "1.16.1",
     "npm:@vanilla-extract/vite-plugin@^4.0.18": "4.0.18_vite@5.4.11__@types+node@22.9.3_@types+node@22.9.3",
     "npm:@vitejs/plugin-react@^4.3.3": "4.3.4_vite@6.0.3__@types+node@22.9.3_@babel+core@7.26.0_@types+node@22.9.3",
-    "npm:hono@^4.6.12": "4.6.12",
+    "npm:hono@^4.6.13": "4.6.13",
     "npm:postcss-preset-mantine@^1.17.0": "1.17.0_postcss@8.4.49",
     "npm:postcss-simple-vars@^7.0.1": "7.0.1_postcss@8.4.49",
     "npm:postcss@^8.4.49": "8.4.49",
@@ -477,7 +476,7 @@
     "@floating-ui/utils@0.2.8": {
       "integrity": "sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig=="
     },
-    "@hono/zod-validator@0.4.1_hono@4.6.12_zod@3.23.8": {
+    "@hono/zod-validator@0.4.1_hono@4.6.13_zod@3.23.8": {
       "integrity": "sha512-I8LyfeJfvVmC5hPjZ2Iij7RjexlgSBT7QJudZ4JvNPLxn0JQ3sqclz2zydlwISAnw21D2n4LQ0nfZdoiv9fQQA==",
       "dependencies": [
         "hono",
@@ -610,14 +609,6 @@
         "postgres-interval@4.0.2"
       ]
     },
-    "@mikro-orm/reflection@6.4.0_@mikro-orm+core@6.4.0": {
-      "integrity": "sha512-QgzLp3qqRoYMUf7OhCbY8jid2aVxTjpRnyemRtQbjfkvLjdYw59LVgbMtA9Ouv1waPv24BthEkge8WmjxzvL2w==",
-      "dependencies": [
-        "@mikro-orm/core",
-        "globby",
-        "ts-morph"
-      ]
-    },
     "@nodelib/fs.scandir@2.1.5": {
       "integrity": "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==",
       "dependencies": [
@@ -703,14 +694,6 @@
       "dependencies": [
         "@tanstack/query-core",
         "react"
-      ]
-    },
-    "@ts-morph/common@0.25.0": {
-      "integrity": "sha512-kMnZz+vGGHi4GoHnLmMhGNjm44kGtKUXGnOvrKmMwAuvNjM/PgKVGfUnL7IDvK7Jb2QQ82jq3Zmp04Gy+r3Dkg==",
-      "dependencies": [
-        "minimatch",
-        "path-browserify",
-        "tinyglobby"
       ]
     },
     "@types/babel__core@7.20.5": {
@@ -849,15 +832,6 @@
     "array-union@2.1.0": {
       "integrity": "sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw=="
     },
-    "balanced-match@1.0.2": {
-      "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw=="
-    },
-    "brace-expansion@2.0.1": {
-      "integrity": "sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==",
-      "dependencies": [
-        "balanced-match"
-      ]
-    },
     "braces@3.0.3": {
       "integrity": "sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==",
       "dependencies": [
@@ -887,9 +861,6 @@
     },
     "clsx@2.1.1": {
       "integrity": "sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA=="
-    },
-    "code-block-writer@13.0.3": {
-      "integrity": "sha512-Oofo0pq3IKnsFtuHqSF7TqBfr71aeyZDVJ0HpmqB7FBM2qEigL0iPONSCZSO9pE9dZTAxANe5XHG9Uy0YMv8cg=="
     },
     "colorette@2.0.19": {
       "integrity": "sha512-3tlv/dIP7FWvj3BsbHrGLJ6l/oKh1O3TcgBqMn+yyCagOxc23fyzDS6HypQbgxWbkpDnf52p1LuR4eWDQ/K9WQ=="
@@ -1076,12 +1047,6 @@
         "reusify"
       ]
     },
-    "fdir@6.4.2_picomatch@4.0.2": {
-      "integrity": "sha512-KnhMXsKSPZlAhp7+IjUkRZKPb4fUyccpDrdFXbi4QL1qkmFh9kVY09Yox+n4MaOb3lHZ1Tv829C3oaaXoMYPDQ==",
-      "dependencies": [
-        "picomatch@4.0.2"
-      ]
-    },
     "fill-range@7.1.1": {
       "integrity": "sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==",
       "dependencies": [
@@ -1150,8 +1115,8 @@
         "function-bind"
       ]
     },
-    "hono@4.6.12": {
-      "integrity": "sha512-eHtf4kSDNw6VVrdbd5IQi16r22m3s7mWPLd7xOMhg1a/Yyb1A0qpUFq8xYMX4FMuDe1nTKeMX5rTx7Nmw+a+Ag=="
+    "hono@4.6.13": {
+      "integrity": "sha512-haV0gaMdSjy9URCRN9hxBPlqHa7fMm/T72kAImIxvw4eQLbNz1rgjN4hHElLJSieDiNuiIAXC//cC6YGz2KCbg=="
     },
     "ignore@5.3.2": {
       "integrity": "sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g=="
@@ -1261,17 +1226,11 @@
       "integrity": "sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==",
       "dependencies": [
         "braces",
-        "picomatch@2.3.1"
+        "picomatch"
       ]
     },
     "mikro-orm@6.4.0": {
       "integrity": "sha512-dnkvm+xJifwjPEkwipKPpbVEeW7XL3w06yREQiUxGQwcnVowpt+tYFelgr5dnPTpARFNoP5Lc0qTlpWaXVRsxA=="
-    },
-    "minimatch@9.0.5": {
-      "integrity": "sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==",
-      "dependencies": [
-        "brace-expansion"
-      ]
     },
     "mlly@1.7.3": {
       "integrity": "sha512-xUsx5n/mN0uQf4V548PKQ+YShA4/IW0KI1dZhrNrPCLG+xizETbHTkOa1f8/xut9JRPp8kQuMnz0oqwkTiLo/A==",
@@ -1308,9 +1267,6 @@
       "dependencies": [
         "p-limit"
       ]
-    },
-    "path-browserify@1.0.1": {
-      "integrity": "sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g=="
     },
     "path-exists@4.0.0": {
       "integrity": "sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w=="
@@ -1377,9 +1333,6 @@
     },
     "picomatch@2.3.1": {
       "integrity": "sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA=="
-    },
-    "picomatch@4.0.2": {
-      "integrity": "sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg=="
     },
     "pkg-types@1.2.1": {
       "integrity": "sha512-sQoqa8alT3nHjGuTjuKgOnvjo4cljkufdtLMnO2LBP/wRwuDlo1tkaEdMxCRhyGRPacv/ztlZgDPm2b7FAmEvw==",
@@ -1684,24 +1637,10 @@
     "tildify@2.0.0": {
       "integrity": "sha512-Cc+OraorugtXNfs50hU9KS369rFXCfgGLpfCfvlc+Ud5u6VWmUQsOAa9HbTvheQdYnrdJqqv1e5oIqXppMYnSw=="
     },
-    "tinyglobby@0.2.10_picomatch@4.0.2": {
-      "integrity": "sha512-Zc+8eJlFMvgatPZTl6A9L/yht8QqdmUNtURHaKZLmKBE12hNPSrqNkUp2cs3M/UKmNVVAMFQYSjYIVHDjW5zew==",
-      "dependencies": [
-        "fdir",
-        "picomatch@4.0.2"
-      ]
-    },
     "to-regex-range@5.0.1": {
       "integrity": "sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==",
       "dependencies": [
         "is-number"
-      ]
-    },
-    "ts-morph@24.0.0": {
-      "integrity": "sha512-2OAOg/Ob5yx9Et7ZX4CvTCc0UFoZHwLEJ+dpDPSUi5TgwwlTlX47w+iFRrEwzUZwYACjq83cgjS/Da50Ga37uw==",
-      "dependencies": [
-        "@ts-morph/common",
-        "code-block-writer"
       ]
     },
     "tslib@2.8.1": {
@@ -1838,7 +1777,6 @@
       "npm:@mantine/vanilla-extract@^7.14.3",
       "npm:@mikro-orm/core@^6.4.0",
       "npm:@mikro-orm/postgresql@^6.4.0",
-      "npm:@mikro-orm/reflection@^6.4.0",
       "npm:@radix-ui/react-icons@^1.3.2",
       "npm:@tanstack/react-query@^5.62.3",
       "npm:@types/node@^22.10.1",
@@ -1847,7 +1785,7 @@
       "npm:@vanilla-extract/css@^1.16.1",
       "npm:@vanilla-extract/vite-plugin@^4.0.18",
       "npm:@vitejs/plugin-react@^4.3.3",
-      "npm:hono@^4.6.12",
+      "npm:hono@^4.6.13",
       "npm:postcss-preset-mantine@^1.17.0",
       "npm:postcss-simple-vars@^7.0.1",
       "npm:postcss@^8.4.49",
