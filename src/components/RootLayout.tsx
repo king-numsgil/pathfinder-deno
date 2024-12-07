@@ -1,4 +1,5 @@
 import { AppShell, Burger, Container, Group, Text } from "@mantine/core";
+import { HomeIcon, MagicWandIcon } from "@radix-ui/react-icons";
 import { useDisclosure } from "@mantine/hooks";
 
 // @ts-types="@types/react"
@@ -32,8 +33,15 @@ export const RootLayout: FC<PropsWithChildren> = ({ children }) => {
             </AppShell.Header>
 
             <AppShell.Navbar bg="green.9">
-                <NavbarLink label="Home" to="/" />
-                <NavbarLink label="Pathfinder">
+                <NavbarLink
+                    leftSection={<HomeIcon />}
+                    label="Home"
+                    to="/"
+                />
+                <NavbarLink
+                    leftSection={<MagicWandIcon />}
+                    label="Pathfinder"
+                >
                     <NavbarLink label="Spells" to="/pathfinder/spells" />
                     <NavbarLink label="Feats" to="/pathfinder/feats" />
                 </NavbarLink>
