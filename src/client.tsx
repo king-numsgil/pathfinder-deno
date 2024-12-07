@@ -1,4 +1,5 @@
 import { hc, type InferRequestType, type InferResponseType } from "hono/client";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { MantineProvider } from "@mantine/core";
 import { HashRouter } from "react-router-dom";
 
@@ -15,14 +16,15 @@ import { cssVariableResolver, theme } from "@/theme/index.ts";
 import { NumsgilRoutes } from "@/pages/index.tsx";
 import type { AppType } from "@/server.ts";
 
+const queryClient = new QueryClient();
 export const client = hc<AppType>("/");
 export type SpellRequest = InferRequestType<typeof client.api.pathfinder.spell.$get>;
 export type SpellResult = InferResponseType<typeof client.api.pathfinder.spell.$get>;
 
-export const spellFetcher = (arg: SpellRequest) => async () => {
-    const res = await client.api.pathfinder.spell.$get(arg);
+export async function spellFetcher(query: SpellRequest["query"]) {
+    const res = await client.api.pathfinder.spell.$get({ query });
     return await res.json() as SpellResult;
-};
+}
 
 export const App: FC = () => {
     return (
@@ -32,7 +34,9 @@ export const App: FC = () => {
                 cssVariablesResolver={cssVariableResolver}
                 theme={theme}
             >
-                <NumsgilRoutes />
+                <QueryClientProvider client={queryClient}>
+                    <NumsgilRoutes />
+                </QueryClientProvider>
             </MantineProvider>
         </HashRouter>
     );
