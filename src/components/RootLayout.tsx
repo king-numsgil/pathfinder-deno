@@ -8,7 +8,7 @@ import type { FC, PropsWithChildren } from "react";
 import { NavbarLink } from "@/components/NavbarLink.tsx";
 
 export const RootLayout: FC<PropsWithChildren> = ({ children }) => {
-    const [opened, { toggle }] = useDisclosure();
+    const [opened, { toggle, close }] = useDisclosure();
 
     return (
         <AppShell
@@ -37,13 +37,14 @@ export const RootLayout: FC<PropsWithChildren> = ({ children }) => {
                     leftSection={<HomeIcon />}
                     label="Home"
                     to="/"
+                    onClick={(_e) => close()}
                 />
                 <NavbarLink
                     leftSection={<MagicWandIcon />}
                     label="Pathfinder"
                 >
-                    <NavbarLink label="Spells" to="/pathfinder/spells" />
-                    <NavbarLink label="Feats" to="/pathfinder/feats" />
+                    <NavbarLink label="Spells" to="/pathfinder/spells" onClick={(_e) => close()} />
+                    <NavbarLink label="Feats" to="/pathfinder/feats" onClick={(_e) => close()} />
                 </NavbarLink>
             </AppShell.Navbar>
 

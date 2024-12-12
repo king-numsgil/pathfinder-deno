@@ -1,5 +1,5 @@
 import { type NavigateOptions, NavLink as RouterNavLink } from "react-router-dom";
-import { NavLink } from "@mantine/core";
+import { NavLink, type NavLinkProps } from "@mantine/core";
 
 // @ts-types="@types/react"
 import type { FC, ReactNode } from "react";
@@ -13,6 +13,7 @@ type RouterNavLinkBaseProps = {
     rightSection?: ReactNode;
     disabled?: boolean;
     defaultOpened?: boolean;
+    onClick?: NavLinkProps["onClick"];
 };
 
 type RouterNavLinkConditionalProps =
@@ -48,6 +49,7 @@ export const NavbarLink: FC<NavbarLinkProps> = (
             }}
             defaultOpened={defaultOpened ?? true}
             childrenOffset={children === undefined ? undefined : 28}
+            onClick={() => console.log("Hello!")}
             {...props}
         >
             {children}
