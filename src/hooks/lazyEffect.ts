@@ -1,6 +1,6 @@
 // From https://gist.github.com/felipecsl/afb987f8b6059814cff0a2ca6020e108
 
-import { debounce } from "@radashi-org/radashi";
+import { debounce } from "radashi";
 
 // @ts-types="@types/react"
 import { type DependencyList, type EffectCallback, useCallback, useEffect, useRef, } from "react";
