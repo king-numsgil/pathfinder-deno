@@ -2,6 +2,7 @@
   "version": "4",
   "specifiers": {
     "jsr:@denorg/scrypt@^4.4.4": "4.4.4",
+    "jsr:@radashi-org/radashi@^12.3.0": "12.3.0",
     "jsr:@std/assert@0.222.1": "0.222.1",
     "jsr:@std/assert@~0.222.1": "0.222.1",
     "jsr:@std/crypto@0.222.1": "0.222.1",
@@ -47,6 +48,9 @@
         "jsr:@std/crypto",
         "jsr:@std/encoding@0.222.1"
       ]
+    },
+    "@radashi-org/radashi@12.3.0": {
+      "integrity": "2743e147dcc121a33890ec1e72dd3e2e678d2b74642626096cee4f7436f241f1"
     },
     "@std/assert@0.222.1": {
       "integrity": "691637161ee584a9919d1f9950ddd1272feb8e0a19e83aa5b7563cedaf73d74c",
@@ -1753,6 +1757,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@denorg/scrypt@^4.4.4",
+      "jsr:@radashi-org/radashi@^12.3.0",
       "jsr:@std/ulid@1",
       "npm:@hono/zod-validator@~0.4.2",
       "npm:@mantine/core@^7.15.1",
