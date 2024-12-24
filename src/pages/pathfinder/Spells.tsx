@@ -24,7 +24,7 @@ const SpellPage: FC<SpellPageProps> = ({ spells }) => {
                     </Text>
                     <Group gap="xs" mb="sm">
                         {spell.classes.map((value, index) => (
-                            <Badge key={index} size="xs" color="cyan">{value.class.name} {value.spellLevel}</Badge>
+                            <Badge key={index} size="xs" bg="rose.4" color="black">{value.class.name} {value.spellLevel}</Badge>
                         ))}
                     </Group>
                     {spell.domains && spell.domains.length > 0 && (
@@ -62,15 +62,15 @@ const SpellPage: FC<SpellPageProps> = ({ spells }) => {
                     <Text mb={0}>Saving Throw: {spell.savingThrow ?? "none"}</Text>
                     <Text mb={0}>Spell Resistance: {spell.spellResistance ?? "no"}</Text>
                     <Group gap="xs" mb="xs">
-                        {spell.somatic && <Badge size="xs" color="green">Somatic</Badge>}
-                        {spell.verbal && <Badge size="xs" color="green">Verbal</Badge>}
+                        {spell.somatic && <Badge size="xs" bg="yellow.4" color="black">Somatic</Badge>}
+                        {spell.verbal && <Badge size="xs" bg="yellow.4" color="black">Verbal</Badge>}
                         {spell.material && (
-                            <Badge size="xs" color="blue">
+                            <Badge size="xs" bg="blue.4" color="black">
                                 Material {spell.componentCost !== null && `${spell.componentCost}gp`}
                             </Badge>
                         )}
-                        {spell.focus && <Badge size="xs" color="blue">Focus</Badge>}
-                        {spell.divineFocus && <Badge size="xs" color="pink">Divine Focus</Badge>}
+                        {spell.focus && <Badge size="xs" bg="blue.4" color="black">Focus</Badge>}
+                        {spell.divineFocus && <Badge size="xs" bg="blue.4" color="black">Divine Focus</Badge>}
                     </Group>
                 </Card>
             ))}
