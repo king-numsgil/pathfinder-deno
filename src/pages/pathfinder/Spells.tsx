@@ -1,5 +1,6 @@
 import { type DefaultError, type InfiniteData, type QueryKey, useSuspenseInfiniteQuery } from "@tanstack/react-query";
 import { Badge, Card, Flex, Group, Loader, SimpleGrid, Text, Title } from "@mantine/core";
+import { NavLink as RouterNavLink, Outlet } from "react-router-dom";
 import { useInViewport } from "@mantine/hooks";
 
 // @ts-types="@types/react"
@@ -16,7 +17,21 @@ const SpellPage: FC<SpellPageProps> = ({ spells }) => {
     return (
         <SimpleGrid mt="md" cols={{ base: 1, md: 2, lg: 3 }}>
             {spells.map((spell) => (
-                <Card key={spell.id} shadow="xs" padding="md">
+                <Card
+                    key={spell.id}
+                    renderRoot={({ className, ...others }) => (
+                        <RouterNavLink
+                            className={({ isActive }) => className + (isActive ? " active" : "")}
+                            to={spell.id}
+                            {...others}
+                        />
+                    )}
+                    style={{
+                        cursor: "pointer",
+                    }}
+                    shadow="xs"
+                    padding="md"
+                >
                     <Title order={2}>{spell.name}</Title>
                     <Text mb="xs">
                         {spell.school?.name} {spell.subschool && `(${spell.subschool.name})`}
@@ -24,7 +39,9 @@ const SpellPage: FC<SpellPageProps> = ({ spells }) => {
                     </Text>
                     <Group gap="xs" mb="sm">
                         {spell.classes.map((value, index) => (
-                            <Badge key={index} size="xs" bg="rose.4" color="black">{value.class.name} {value.spellLevel}</Badge>
+                            <Badge key={index} size="xs" bg="rose.4" color="black">
+                                {value.class.name} {value.spellLevel}
+                            </Badge>
                         ))}
                     </Group>
                     {spell.domains && spell.domains.length > 0 && (
@@ -49,7 +66,8 @@ const SpellPage: FC<SpellPageProps> = ({ spells }) => {
                     )}
                     {spell.mysteries && spell.mysteries.length > 0 && (
                         <Text mb={0}>
-                            Mystery: {spell.mysteries.map((v) =>
+                            Mystery:{" "}
+                            {spell.mysteries.map((v) =>
                                 `${v.mystery.name} (${v.classLevel}) ${v.note === null ? "" : `(${v.note})`}`
                             ).join(", ")}
                         </Text>
@@ -83,7 +101,7 @@ type SpellContentProps = {
 };
 
 const SpellContent: FC<SpellContentProps> = ({ filters }) => {
-    const {ref, inViewport} = useInViewport();
+    const { ref, inViewport } = useInViewport();
     const { data, isFetching, hasNextPage, fetchNextPage } = useSuspenseInfiniteQuery<
         SpellResult,
         DefaultError,
@@ -103,11 +121,15 @@ const SpellContent: FC<SpellContentProps> = ({ filters }) => {
         getNextPageParam: (lastPage) => lastPage.endCursor ?? undefined,
     });
 
-    useLazyEffect(() => {
-        if (inViewport && hasNextPage) {
-            fetchNextPage();
-        }
-    }, [inViewport, hasNextPage, fetchNextPage], 200);
+    useLazyEffect(
+        () => {
+            if (inViewport && hasNextPage) {
+                fetchNextPage();
+            }
+        },
+        [inViewport, hasNextPage, fetchNextPage],
+        200,
+    );
 
     return (
         <>
@@ -127,14 +149,17 @@ const SpellContent: FC<SpellContentProps> = ({ filters }) => {
 
 export const Spells: FC = () => {
     return (
-        <Suspense
-            fallback={
-                <Flex gap="md" justify="center" align="center">
-                    <Loader size="xl" />
-                </Flex>
-            }
-        >
-            <SpellContent filters={{}} />
-        </Suspense>
+        <>
+            <Suspense
+                fallback={
+                    <Flex gap="md" justify="center" align="center">
+                        <Loader size="xl" />
+                    </Flex>
+                }
+            >
+                <SpellContent filters={{}} />
+            </Suspense>
+            <Outlet />
+        </>
     );
 };
