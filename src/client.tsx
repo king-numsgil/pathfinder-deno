@@ -26,6 +26,15 @@ export async function spellFetcher(query: SpellRequest["query"]) {
     return await res.json() as SpellResult;
 }
 
+export async function singleSpellFetcher(id: string) {
+    const res = await client.api.pathfinder.spell[":id"].$get({
+        param: {
+            id,
+        },
+    });
+    return await res.json();
+}
+
 export const App: FC = () => {
     return (
         <HashRouter>
