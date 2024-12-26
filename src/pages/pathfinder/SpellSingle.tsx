@@ -113,6 +113,7 @@ export const SpellSingle: FC = () => {
                 navigate("/pathfinder/spells");
             }}
             size="lg"
+            withCloseButton={false}
         >
             <Suspense fallback={<LoadingOverlay visible />}>
                 <SpellModalContent spellId={spellId ?? ""} />
