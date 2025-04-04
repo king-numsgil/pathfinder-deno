@@ -1,6 +1,6 @@
 import { Entity, PrimaryKey, Property, type Ref, Unique } from "@mikro-orm/core";
 import { hash, verify } from "@denorg/scrypt";
-import { ulid } from "@std/ulid";
+import { ulid } from "ulid";
 
 @Entity()
 export class User {

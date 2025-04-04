@@ -1,5 +1,5 @@
 import { Collection, Entity, Enum, Index, ManyToOne, OneToMany, PrimaryKey, Property } from "@mikro-orm/core";
-import { ulid } from "@std/ulid";
+import { ulid } from "ulid";
 
 import type { DomainSpell, SubdomainSpell } from "@/api/pathfinder/entities/Domain.entity.ts";
 import type { School, Subschool } from "@/api/pathfinder/entities/School.entity.ts";

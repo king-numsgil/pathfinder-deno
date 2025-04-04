@@ -8,7 +8,6 @@
     "jsr:@std/encoding@0.222.1": "0.222.1",
     "jsr:@std/encoding@~0.222.1": "0.222.1",
     "jsr:@std/fmt@~0.222.1": "0.222.1",
-    "jsr:@std/ulid@1": "1.0.0",
     "npm:@hono/zod-validator@~0.4.3": "0.4.3_hono@4.7.5_zod@3.24.2",
     "npm:@mantine/core@^7.17.3": "7.17.3_@mantine+hooks@7.17.3__react@18.3.1_react@18.3.1_react-dom@18.3.1__react@18.3.1_@types+react@18.3.20",
     "npm:@mantine/form@^7.17.3": "7.17.3_react@18.3.1",
@@ -39,6 +38,7 @@
     "npm:react-router-dom@^7.4.1": "7.4.1_react@18.3.1_react-dom@18.3.1__react@18.3.1",
     "npm:react@^18.3.1": "18.3.1",
     "npm:typescript@^5.8.2": "5.8.2",
+    "npm:ulid@3": "3.0.0",
     "npm:vite@^6.0.7": "6.0.7_@types+node@22.10.2",
     "npm:zod@^3.24.2": "3.24.2"
   },
@@ -69,9 +69,6 @@
     },
     "@std/fmt@0.222.1": {
       "integrity": "ec3382f9b0261c1ab1a5c804aa355d816515fa984cdd827ed32edfb187c0a722"
-    },
-    "@std/ulid@1.0.0": {
-      "integrity": "d41c3d27a907714413649fee864b7cde8d42ee68437d22b79d5de4f81d808780"
     }
   },
   "npm": {
@@ -1505,6 +1502,9 @@
     "ufo@1.5.4": {
       "integrity": "sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ=="
     },
+    "ulid@3.0.0": {
+      "integrity": "sha512-yvZYdXInnJve6LdlPIuYmURdS2NP41ZoF4QW7SXwbUKYt53+0eDAySO+rGSvM2O/ciuB/G+8N7GQrZ1mCJpuqw=="
+    },
     "undici-types@6.20.0": {
       "integrity": "sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg=="
     },
@@ -1597,7 +1597,6 @@
   "workspace": {
     "dependencies": [
       "jsr:@denorg/scrypt@^4.4.4",
-      "jsr:@std/ulid@1",
       "npm:@hono/zod-validator@~0.4.3",
       "npm:@mantine/core@^7.17.3",
       "npm:@mantine/form@^7.17.3",
@@ -1625,6 +1624,7 @@
       "npm:react-router-dom@^7.4.1",
       "npm:react@^18.3.1",
       "npm:typescript@^5.8.2",
+      "npm:ulid@3",
       "npm:vite@^6.0.7",
       "npm:zod@^3.24.2"
     ]
