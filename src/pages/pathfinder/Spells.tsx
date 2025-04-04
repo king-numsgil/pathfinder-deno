@@ -1,12 +1,32 @@
-import { type DefaultError, type InfiniteData, type QueryKey, useSuspenseInfiniteQuery } from "@tanstack/react-query";
-import { Badge, Card, Flex, Group, Loader, SimpleGrid, Text, Title } from "@mantine/core";
+import { useDebouncedValue, useDisclosure, useInViewport } from "@mantine/hooks";
 import { NavLink as RouterNavLink, Outlet } from "react-router-dom";
-import { useInViewport } from "@mantine/hooks";
+import { Cross1Icon, GearIcon } from "@radix-ui/react-icons";
+import {
+    ActionIcon,
+    Badge,
+    Card,
+    Flex,
+    Group,
+    Loader,
+    Modal,
+    NativeSelect,
+    SimpleGrid,
+    Text,
+    TextInput,
+    Title,
+} from "@mantine/core";
+import {
+    type DefaultError,
+    type InfiniteData,
+    type QueryKey,
+    useQuery,
+    useSuspenseInfiniteQuery,
+} from "@tanstack/react-query";
 
 // @ts-types="@types/react"
-import { type FC, Suspense } from "react";
+import { type FC, Suspense, useState } from "react";
 
-import { spellFetcher, type SpellRequest, type SpellResult } from "@/client.tsx";
+import { spellFetcher, type SpellRequest, type SpellResult, spellTaxonomyFetcher } from "@/client.tsx";
 import { useLazyEffect } from "@/hooks/lazyEffect.ts";
 
 type SpellPageProps = {
@@ -66,8 +86,7 @@ const SpellPage: FC<SpellPageProps> = ({ spells }) => {
                     )}
                     {spell.mysteries && spell.mysteries.length > 0 && (
                         <Text mb={0}>
-                            Mystery:{" "}
-                            {spell.mysteries.map((v) =>
+                            Mystery: {spell.mysteries.map((v) =>
                                 `${v.mystery.name} (${v.classLevel}) ${v.note === null ? "" : `(${v.note})`}`
                             ).join(", ")}
                         </Text>
@@ -96,8 +115,10 @@ const SpellPage: FC<SpellPageProps> = ({ spells }) => {
     );
 };
 
+type SpellFilterType = Omit<SpellRequest["query"], "cursor" | "pageLength">;
+
 type SpellContentProps = {
-    filters: Omit<SpellRequest["query"], "cursor" | "pageLength">;
+    filters: SpellFilterType;
 };
 
 const SpellContent: FC<SpellContentProps> = ({ filters }) => {
@@ -147,9 +168,217 @@ const SpellContent: FC<SpellContentProps> = ({ filters }) => {
     );
 };
 
-export const Spells: FC = () => {
+type SpellFilterProps = {
+    filters: SpellFilterType;
+    onFilterChange: (filters: SpellFilterType) => void;
+};
+
+const SpellFilter: FC<SpellFilterProps> = ({ filters, onFilterChange }) => {
+    const [opened, { open, close }] = useDisclosure(false);
+
+    const { data, isLoading, isSuccess } = useQuery({
+        queryKey: ["spell-taxonomy"],
+        queryFn: spellTaxonomyFetcher,
+        staleTime: 1000 * 60 * 10,
+    });
+
     return (
         <>
+            <TextInput
+                label="Search spell by name"
+                value={filters.name ?? ""}
+                onChange={(event) => onFilterChange({ ...filters, name: event.target.value })}
+                mb="md"
+                rightSectionWidth="md"
+                rightSection={
+                    <Group gap="xs">
+                        {Object.keys(filters).length > 0 && (
+                            <ActionIcon
+                                variant="subtle"
+                                onClick={() => onFilterChange({})}
+                            >
+                                <Cross1Icon />
+                            </ActionIcon>
+                        )}
+                        <ActionIcon
+                            variant="subtle"
+                            onClick={() => open()}
+                        >
+                            <GearIcon />
+                        </ActionIcon>
+                    </Group>
+                }
+            />
+
+            <Modal
+                onClose={close}
+                opened={opened}
+                title={`Spell Filters (${Object.keys(filters).length} applied)`}
+                size="lg"
+                overlayProps={{
+                    transitionProps: {
+                        duration: 300,
+                        exitDuration: 300,
+                    },
+                    blur: 5,
+                }}
+                centered
+            >
+                {isLoading && (
+                    <Flex gap="md" justify="center" align="center">
+                        <Loader size="xl" />
+                    </Flex>
+                )}
+                {isSuccess && (
+                    <>
+                        <Group grow>
+                            <NativeSelect
+                                label="Spell School"
+                                value={filters.$school}
+                                onChange={(e) =>
+                                    onFilterChange({
+                                        ...filters,
+                                        $school: e.target.value === "" ? undefined : e.target.value,
+                                    })}
+                                data={[
+                                    { label: "Any", value: "" },
+                                    ...data.schools.map((item) => ({ label: item.name, value: item.id })),
+                                ]}
+                            />
+                            <NativeSelect
+                                label="Spell Subschool"
+                                value={filters.$subschool}
+                                onChange={(e) =>
+                                    onFilterChange({
+                                        ...filters,
+                                        $subschool: e.target.value === "" ? undefined : e.target.value,
+                                    })}
+                                data={[
+                                    { label: "Any", value: "" },
+                                    ...data.subschools.map((item) => ({ label: item.name, value: item.id })),
+                                ]}
+                            />
+                        </Group>
+                        <Group grow>
+                            <NativeSelect
+                                label="Spellcasting Class"
+                                value={filters.$class}
+                                onChange={(e) =>
+                                    onFilterChange({
+                                        ...filters,
+                                        $class: e.target.value === "" ? undefined : e.target.value,
+                                    })}
+                                data={[
+                                    { label: "Any", value: "" },
+                                    ...data.classes.map((item) => ({ label: item.name, value: item.id })),
+                                ]}
+                            />
+                            <NativeSelect
+                                label="Spell Level"
+                                value={filters.spellLevel?.toString()}
+                                onChange={(e) =>
+                                    onFilterChange({
+                                        ...filters,
+                                        spellLevel: e.target.value === "" ? undefined : parseInt(e.target.value),
+                                    })}
+                                data={[
+                                    { label: "All", value: "" },
+                                    { label: "Cantrip/Orison", value: "0" },
+                                    { label: "1st Level", value: "1" },
+                                    { label: "2nd Level", value: "2" },
+                                    { label: "3rd Level", value: "3" },
+                                    { label: "4th Level", value: "4" },
+                                    { label: "5th Level", value: "5" },
+                                    { label: "6th Level", value: "6" },
+                                    { label: "7th Level", value: "7" },
+                                    { label: "8th Level", value: "8" },
+                                    { label: "9th Level", value: "9" },
+                                ]}
+                            />
+                        </Group>
+                        <Group grow>
+                            <NativeSelect
+                                label="Divine Domain"
+                                value={filters.$domain}
+                                onChange={(e) =>
+                                    onFilterChange({
+                                        ...filters,
+                                        $domain: e.target.value === "" ? undefined : e.target.value,
+                                    })}
+                                data={[
+                                    { label: "Any", value: "" },
+                                    ...data.domains.map((item) => ({ label: item.name, value: item.id })),
+                                ]}
+                            />
+                            <NativeSelect
+                                label="Divine Subdomain"
+                                value={filters.$subdomain}
+                                onChange={(e) =>
+                                    onFilterChange({
+                                        ...filters,
+                                        $subdomain: e.target.value === "" ? undefined : e.target.value,
+                                    })}
+                                data={[
+                                    { label: "Any", value: "" },
+                                    ...data.subdomains.map((item) => ({ label: item.name, value: item.id })),
+                                ]}
+                            />
+                        </Group>
+                        <Group grow>
+                            <NativeSelect
+                                label="Patron"
+                                value={filters.$patron}
+                                onChange={(e) =>
+                                    onFilterChange({
+                                        ...filters,
+                                        $patron: e.target.value === "" ? undefined : e.target.value,
+                                    })}
+                                data={[
+                                    { label: "Any", value: "" },
+                                    ...data.patrons.map((item) => ({ label: item.name, value: item.id })),
+                                ]}
+                            />
+                            <NativeSelect
+                                label="Bloodline"
+                                value={filters.$bloodline}
+                                onChange={(e) =>
+                                    onFilterChange({
+                                        ...filters,
+                                        $bloodline: e.target.value === "" ? undefined : e.target.value,
+                                    })}
+                                data={[
+                                    { label: "Any", value: "" },
+                                    ...data.bloodlines.map((item) => ({ label: item.name, value: item.id })),
+                                ]}
+                            />
+                        </Group>
+                        <NativeSelect
+                            label="Mystery"
+                            value={filters.$mystery}
+                            onChange={(e) =>
+                                onFilterChange({
+                                    ...filters,
+                                    $mystery: e.target.value === "" ? undefined : e.target.value,
+                                })}
+                            data={[
+                                { label: "Any", value: "" },
+                                ...data.mysteries.map((item) => ({ label: item.name, value: item.id })),
+                            ]}
+                        />
+                    </>
+                )}
+            </Modal>
+        </>
+    );
+};
+
+export const Spells: FC = () => {
+    const [filters, setFilters] = useState<SpellFilterType>({});
+    const [debouncedFilters] = useDebouncedValue(filters, 200);
+
+    return (
+        <>
+            <SpellFilter filters={filters} onFilterChange={(newFilters) => setFilters(newFilters)} />
             <Suspense
                 fallback={
                     <Flex gap="md" justify="center" align="center">
@@ -157,7 +386,7 @@ export const Spells: FC = () => {
                     </Flex>
                 }
             >
-                <SpellContent filters={{}} />
+                <SpellContent filters={debouncedFilters} />
             </Suspense>
             <Outlet />
         </>
