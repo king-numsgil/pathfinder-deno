@@ -1,5 +1,5 @@
 import { Collection, Entity, Enum, ManyToMany, OneToMany, PrimaryKey, Property, Unique } from "@mikro-orm/core";
-import { ulid } from "ulid";
+import { ulid } from "npm:ulid";
 
 import type { Domain, Subdomain } from "@/api/pathfinder/entities/Domain.entity.ts";
 import type { Mystery } from "@/api/pathfinder/entities/Mystery.entity.ts";
