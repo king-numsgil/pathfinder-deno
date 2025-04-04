@@ -26,6 +26,39 @@ export async function spellFetcher(query: SpellRequest["query"]) {
     return await res.json() as SpellResult;
 }
 
+export async function spellTaxonomyFetcher() {
+    const [
+        schools,
+        subschools,
+        classes,
+        domains,
+        subdomains,
+        bloodlines,
+        patrons,
+        mysteries,
+    ] = await Promise.all([
+        client.api.pathfinder.school.$get().then(r => r.json()),
+        client.api.pathfinder.subschool.$get().then(r => r.json()),
+        client.api.pathfinder.class.$get().then(r => r.json()),
+        client.api.pathfinder.domain.$get().then(r => r.json()),
+        client.api.pathfinder.subdomain.$get().then(r => r.json()),
+        client.api.pathfinder.bloodline.$get().then(r => r.json()),
+        client.api.pathfinder.patron.$get().then(r => r.json()),
+        client.api.pathfinder.mystery.$get().then(r => r.json()),
+    ]);
+
+    return {
+        schools,
+        subschools,
+        classes,
+        domains,
+        subdomains,
+        bloodlines,
+        patrons,
+        mysteries,
+    };
+}
+
 export async function singleSpellFetcher(id: string) {
     const res = await client.api.pathfinder.spell[":id"].$get({
         param: {
